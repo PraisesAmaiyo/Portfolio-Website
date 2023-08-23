@@ -1,0 +1,9 @@
+.about {
+    gap: $gutter-vertical-small;
+
+    &-image {
+        height: 40rem;
+        width: 40rem;
+        object-fit: cover;
+    }
+}

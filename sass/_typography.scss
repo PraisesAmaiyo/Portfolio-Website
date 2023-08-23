@@ -1,5 +1,7 @@
 .heading {
     margin-bottom: 2rem;
+    text-align: center;
+    font-size: 3rem;
 
     h2 {
         text-align: center;
@@ -24,5 +26,26 @@
                 margin-left: 10%;
             }
         }
+    }
+}
+
+.btn {
+    position: relative;
+    font-size: 1.5rem;
+    padding: 1rem;
+    background-color: var(--orange);
+    color: var(--white);
+    display: inline-block;
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    transition-duration: 0.3s;
+    transition-property: transform;
+
+    &:hover,
+    &:focus,
+    &:active {
+        -webkit-transform: translateX(8px);
+        transform: translateX(8px);
     }
 }

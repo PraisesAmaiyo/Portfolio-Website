@@ -21,7 +21,7 @@ header {
     & .logo h2 {
         font-size: 2.5rem;
         font-weight: 900;
-        color: var(--purple);
+        color: var(--orange);
         text-transform: uppercase;
         letter-spacing: 0.2rem;
     }
@@ -33,7 +33,7 @@ header {
 
         &:hover,
         &.active {
-            color: var(--purple);
+            color: var(--orange);
         }
     }
 
@@ -54,6 +54,6 @@ header {
     }
 
     & #menu-btn:hover {
-        color: var(--purple);
+        color: var(--orange);
     }
 }

@@ -1,10 +1,35 @@
 :root {
-    --purple: #d1593c;
+    --orange: #d1593c;
     --black: #324151;
     --white: #f7f5f2;
     --grey: #dfdfde;
     --rrr: rgba(24, 40, 56, 0.924);
 }
+
+$gutter-vertical-small: 6rem;
+
+.grid {
+    display: grid
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    // grid-template-rows: 1fr;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+// display;
 
 * {
     font-family: 'Lora', sans-serif;
@@ -17,7 +42,7 @@
 
     &::selection {
         color: var(--white);
-        background-color: var(--purple);
+        background-color: var(--orange);
     }
 }
 
@@ -35,6 +60,8 @@ body {
     margin: 0 auto;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-size: cover;
+    color: white;
 }
 
 section {
@@ -47,7 +74,7 @@ section {
 
 ::-webkit-scrollbar-thumb {
     border-radius: 1rem;
-    background-color: var(--purple);
+    background-color: var(--orange);
 }
 
 ::-webkit-scrollbar-track {
@@ -63,5 +90,34 @@ section {
 
 .swiper-pagination-bullet-active {
     width: 3rem;
-    background: var(--purple);
+    background: var(--orange);
 }
+
+
+// .btn {
+//     display: inline-block;
+//     vertical-align: middle;
+//     -webkit-transform: perspective(1px) translateZ(0);
+//     transform: perspective(1px) translateZ(0);
+//     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+//     -webkit-transition-duration: 0.1s;
+//     transition-duration: 0.1s;
+// }
+
+// .btn .hvr-icon {
+//     -webkit-transform: translateZ(0);
+//     transform: translateZ(0);
+//     -webkit-transition-duration: 0.1s;
+//     transition-duration: 0.1s;
+//     -webkit-transition-property: transform;
+//     transition-property: transform;
+//     -webkit-transition-timing-function: ease-out;
+//     transition-timing-function: ease-out;
+// }
+
+// .btn:hover .hvr-icon,
+// .btn:focus .hvr-icon,
+// .btn:active .hvr-icon {
+//     -webkit-transform: translateX(4px);
+//     transform: translateX(4px);
+// }
