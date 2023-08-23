@@ -1,0 +1,28 @@
+.heading {
+    margin-bottom: 2rem;
+
+    h2 {
+        text-align: center;
+        padding-bottom: 2rem;
+        color: var(--purple);
+        font-size: 4rem;
+
+        span {
+            position: relative;
+            z-index: 0;
+            color: var(--white);
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: -0.5rem;
+                left: 0;
+                z-index: -1;
+                background: var(--purple);
+                height: 0.2rem;
+                width: 80%;
+                margin-left: 10%;
+            }
+        }
+    }
+}

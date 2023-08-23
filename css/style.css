@@ -1,0 +1,181 @@
+:root {
+  --purple: #d1593c;
+  --black: #324151;
+  --white: #f7f5f2;
+  --grey: #dfdfde;
+  --rrr: rgba(24, 40, 56, 0.924); }
+
+* {
+  font-family: 'Lora', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear; }
+  *::selection {
+    color: var(--white);
+    background-color: var(--purple); }
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem; }
+
+body {
+  background-image: linear-gradient(to right, rgba(24, 40, 56, 0.924), rgba(24, 40, 56, 0.924)), url(../img/Home-Image.png);
+  width: 120rem;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
+
+section {
+  padding: 2rem 5%; }
+
+::-webkit-scrollbar {
+  width: 0.8rem; }
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background-color: var(--purple); }
+
+::-webkit-scrollbar-track {
+  background-color: var(--black); }
+
+.swiper-pagination-bullet {
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50rem;
+  background-color: var(--grey); }
+
+.swiper-pagination-bullet-active {
+  width: 3rem;
+  background: var(--purple); }
+
+.heading {
+  margin-bottom: 2rem; }
+  .heading h2 {
+    text-align: center;
+    padding-bottom: 2rem;
+    color: var(--purple);
+    font-size: 4rem; }
+    .heading h2 span {
+      position: relative;
+      z-index: 0;
+      color: var(--white); }
+      .heading h2 span::before {
+        content: '';
+        position: absolute;
+        bottom: -0.5rem;
+        left: 0;
+        z-index: -1;
+        background: var(--purple);
+        height: 0.2rem;
+        width: 80%;
+        margin-left: 10%; }
+
+.home {
+  padding: 0rem 5%;
+  min-height: 100vh; }
+
+.home .box-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4rem; }
+
+.home .image {
+  text-align: center;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 40rem;
+  flex: 1 1 40rem; }
+
+.home .image img {
+  height: 40rem;
+  width: 40rem;
+  border: 1px solid #495665;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  object-fit: cover; }
+
+.home .content {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 40rem;
+  flex: 1 1 40rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 7rem; }
+
+.home .content h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--purple); }
+
+.home .content h1 {
+  font-size: 4rem;
+  color: var(--white);
+  padding: 1rem 0;
+  text-transform: none; }
+
+.home .content h1 span {
+  color: var(--purple); }
+
+.home .content p {
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: var(--white);
+  padding-bottom: 2rem;
+  line-height: 1.5; }
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  transition: all 0.5s linear;
+  z-index: 999; }
+  header.sticky {
+    border-bottom: 0.1rem solid var(--grey);
+    background: rgba(0, 0, 0, 0.8); }
+  header .logo h2 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--purple);
+    text-transform: uppercase;
+    letter-spacing: 0.2rem; }
+  header .navbar a {
+    color: var(--white);
+    font-size: 1.8rem;
+    margin-left: 1rem; }
+    header .navbar a:hover, header .navbar a.active {
+      color: var(--purple); }
+  header #menu-btn {
+    font-size: 3rem;
+    color: var(--white);
+    cursor: pointer;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+    display: none; }
+  header .fa-times {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  header #menu-btn:hover {
+    color: var(--purple); }

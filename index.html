@@ -4,14 +4,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
     <script defer src="JS/script.js"></script>
     <title>Praises Amaiyo - Portfolio Website</title>
 </head>
 
 <body>
+    <header class="header">
+        <a class="logo" href="#home">
+            <h2> Praises </h2>
+        </a>
 
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#about">about</a>
+            <a href="#service">service</a>
+            <a href="#portfolio">portfolio</a>
+            <a href="#testimonial">testimonials</a>
+            <a href="#contact">contact</a>
+        </nav>
+
+        <div class="fas fa-bars" id="menu-btn"></div>
+
+    </header>
+
+    <section class="home" id="home">
+
+        <div class="box-container">
+
+            <div class="content">
+                <div class="text">
+                    <h2>hi there!</h1>
+                        <h1>I Am a <span class="typing-text"></span></h1>
+                        <p>I am a self-taught front-end web developer with a strong interest in creating impactful
+                            visual components for web applications. </p>
+                        <a href="#" class="btn">Send a message <i class="fas fa-user"></i></a>
+                </div>
+            </div>
+
+            <div class="image">
+                <img src="./img/Home-Image.png" alt="Home image">
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="about" id="about">
+        <h2 class="heading">About Me</h2>
+        <div class="about-image">
+            <img src="./img/Home-Image.png" alt="about image">
+        </div>
+        <div class="about-info">
+            <h3 class="heading-sub">My Name Is Praises Amaiyo. </h3>
+            <p class="text">I Am A Highly Motivated And Collaborative Individual Who Is Always Eager To Learn New Things
+                And I Am Always Looking For Ways To Improve My Skills. I Am Also A Great Communicator And I Am Able To
+                Work Effectively In Both Technical And Non-Technical Environments.</p>
+        </div>
+        <button class="btn-dark">Download CV</button>
+    </section>
 </body>
 
 </html>
