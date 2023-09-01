@@ -1,32 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap");
 :root {
   --orange: #d1593c;
   --black: #324151;
   --white: #f7f5f2;
   --grey: #dfdfde;
+  --faint: #dfdfde3e;
   --rrr: rgba(24, 40, 56, 0.924); }
 
-.grid {
-  display: grid; }
-
-.grid-2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr; }
-
-.grid-3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); }
-
-.grid-4 {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); }
-
 * {
-  font-family: 'Lora', sans-serif;
+  font-family: "lora", serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   text-decoration: none;
-  text-transform: capitalize;
   transition: all 0.2s linear; }
   *::selection {
     color: var(--white);
@@ -40,12 +26,16 @@ html {
 
 body {
   background-image: linear-gradient(to right, rgba(24, 40, 56, 0.924), rgba(24, 40, 56, 0.924)), url(../img/Home-Image.png);
-  width: 120rem;
   margin: 0 auto;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   color: white; }
+
+.container {
+  display: grid;
+  grid-template-rows: 100vh min-content 40vw repeat(3, min-content);
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] minmax(min-content, 120rem) [center-end] minmax(6rem, 1fr) [full-end]; }
 
 section {
   padding: 2rem 5%; }
@@ -71,28 +61,38 @@ section {
   background: var(--orange); }
 
 .heading {
-  margin-bottom: 2rem;
+  margin: 10rem;
   text-align: center;
-  font-size: 3rem; }
-  .heading h2 {
-    text-align: center;
-    padding-bottom: 2rem;
-    color: var(--purple);
-    font-size: 4rem; }
-    .heading h2 span {
-      position: relative;
-      z-index: 0;
-      color: var(--white); }
-      .heading h2 span::before {
-        content: '';
-        position: absolute;
-        bottom: -0.5rem;
-        left: 0;
-        z-index: -1;
-        background: var(--purple);
-        height: 0.2rem;
-        width: 80%;
-        margin-left: 10%; }
+  font-size: 4rem;
+  grid-column: 1 / -1;
+  font-weight: 700; }
+  .heading-sub {
+    font-size: 2.8rem;
+    font-weight: 400;
+    margin-bottom: 3rem; }
+
+.faint-heading {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  margin: 10rem 0;
+  text-align: center;
+  font-size: 7rem;
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: 0.7px var(--faint);
+  text-stroke: 0.7px var(--faint); }
+
+.text {
+  font-size: 2rem;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
+  font-weight: 400; }
+
+.underline {
+  text-decoration: underline; }
 
 .btn {
   position: relative;
@@ -112,7 +112,8 @@ section {
 
 .home {
   padding: 0rem 5%;
-  min-height: 100vh; }
+  grid-column: center-start / center-end;
+  grid-row: 1/2; }
   .home .box-container {
     min-height: 100vh;
     display: flex;
@@ -131,7 +132,7 @@ section {
       border: 2px solid #495665;
       border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
       object-fit: cover;
-      animation: changeProperties 15s infinite; }
+      animation: changeProperties 20s infinite; }
   .home .content {
     flex: 1 1 40rem;
     display: -webkit-box;
@@ -162,19 +163,62 @@ section {
   0% {
     border-color: #495665;
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
-  50% {
+  33% {
     border-color: #5b6774;
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%; }
+  66% {
+    border-color: #424d5b;
     border-radius: 61% 39% 22% 78% / 64% 66% 34% 36%; }
   100% {
     border-color: #424d5b;
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; } }
 
+.accomplishment {
+  grid-column: center-start / center-end;
+  margin-bottom: 10rem;
+  position: relative; }
+  .accomplishment-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 7rem; }
+
+.card {
+  background-color: var(--black);
+  padding: 2rem;
+  border: 1px solid var(--faint); }
+  .card-info {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--faint); }
+    .card-info:not(:last-child) {
+      margin-bottom: 2rem; }
+  .card-date {
+    color: var(--orange);
+    font-size: 2rem;
+    padding-bottom: 2rem; }
+  .card-heading {
+    font-size: 1.8rem;
+    margin-bottom: 1rem; }
+    .card-heading span {
+      font-weight: 400;
+      font-size: 1.4rem; }
+  .card-text {
+    font-size: 1.4rem; }
+
 .about {
-  gap: 6rem; }
+  grid-column: center-start / center-end;
+  margin-bottom: 10rem;
+  position: relative; }
+  .about-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    align-items: center; }
   .about-image {
-    height: 40rem;
-    width: 40rem;
-    object-fit: cover; }
+    width: 100%;
+    object-fit: cover;
+    border: 2px solid #495665; }
+  .about-btn {
+    margin-top: 2.5rem; }
 
 header {
   position: fixed;

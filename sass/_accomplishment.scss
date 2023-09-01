@@ -1,0 +1,46 @@
+.accomplishment {
+    grid-column: center-start / center-end;
+    margin-bottom: 10rem;
+    position: relative;
+
+    &-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        grid-gap: 7rem;
+    }
+}
+
+.card {
+    background-color: var(--black);
+    padding: 2rem;
+    border: 1px solid var(--faint);
+
+    &-info {
+        padding-bottom: 2rem;
+        border-bottom: 1px solid var(--faint);
+
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &-date {
+        color: var(--orange);
+        font-size: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    &-heading {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+
+        & span {
+            font-weight: 400;
+            font-size: 1.4rem;
+        }
+    }
+
+    &-text {
+        font-size: 1.4rem;
+    }
+}

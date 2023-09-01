@@ -1,6 +1,7 @@
 .home {
     padding: 0rem 5%;
-    min-height: 100vh;
+    grid-column: center-start / center-end;
+    grid-row: 1/2;
 
     & .box-container {
         min-height: 100vh;
@@ -23,7 +24,7 @@
             border: 2px solid #495665;
             border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
             object-fit: cover;
-            animation: changeProperties 15s infinite;
+            animation: changeProperties 20s infinite;
         }
     }
 
@@ -54,6 +55,7 @@
         }
 
         & p {
+
             font-size: 1.7rem;
             font-weight: 400;
             color: var(--white);
@@ -69,13 +71,21 @@
         border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     }
 
-    50% {
+    33% {
         border-color: #5b6774;
-        border-radius: 61% 39% 22% 78% / 64% 66% 34% 36%
+        border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+        // border-radius: 61% 39% 22% 78% / 64% 66% 34% 36%;
+    }
+
+    66% {
+        border-color: #424d5b;
+        border-radius: 61% 39% 22% 78% / 64% 66% 34% 36%;
+        // border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     }
 
     100% {
         border-color: #424d5b;
         border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        // border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     }
 }

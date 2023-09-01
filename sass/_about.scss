@@ -1,9 +1,24 @@
 .about {
-    gap: $gutter-vertical-small;
+    grid-column: center-start / center-end;
+    margin-bottom: 10rem;
+    position: relative;
+
+    &-heading {}
+
+    &-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5rem;
+        align-items: center;
+    }
 
     &-image {
-        height: 40rem;
-        width: 40rem;
+        width: 100%;
         object-fit: cover;
+        border: 2px solid #495665;
+    }
+
+    &-btn {
+        margin-top: 2.5rem;
     }
 }

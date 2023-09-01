@@ -4,9 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <script src="https://kit.fontawesome.com/d0cbf0cdf0.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -17,61 +15,139 @@
 </head>
 
 <body>
-    <header class="header">
-        <a class="logo" href="#home">
-            <h2> Praises </h2>
-        </a>
+    <div class="container">
 
-        <nav class="navbar">
-            <a href="#home">home</a>
-            <a href="#about">about</a>
-            <a href="#service">service</a>
-            <a href="#portfolio">portfolio</a>
-            <a href="#testimonial">testimonials</a>
-            <a href="#contact">contact</a>
-        </nav>
+        <header class="header">
+            <a class="logo" href="#home">
+                <h2> Praises </h2>
+            </a>
 
-        <div class="fas fa-bars" id="menu-btn"></div>
+            <nav class="navbar">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#service">Service</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#testimonial">Testimonials</a>
+                <a href="#contact">Contact</a>
+            </nav>
 
-    </header>
+            <div class="fas fa-bars" id="menu-btn"></div>
 
-    <section class="home" id="home">
+        </header>
 
-        <div class="box-container">
-
-            <div class="content">
-                <div class="text">
-                    <h2>hi there!</h1>
+        <section class="home" id="home">
+        
+            <div class="box-container">
+        
+                <div class="content">
+                    <div class="text">
+                        <h2>Hi there!</h2>
                         <h1>I Am a <span class="typing-text"></span></h1>
-                        <p>I am a self-taught front-end web developer with a strong interest in creating impactful
-                            visual components for web applications. </p>
+                        <p>I am a Self-taught Front-End Web Developer with a strong interest in creating impactful
+                            visual components for Web Applications. </p>
                         <a href="#" class="btn hvr-icon-forward">Send a message <i class="fas fa-user hvr-icon"></i></a>
+                    </div>
+                </div>
+        
+                <div class="image">
+                    <img src="./img/Home-Image.png" alt="Home image">
+                </div>
+        
+            </div>
+        
+        </section>
+        
+        <section class="about" id="about">
+            <div class="about-heading">
+                <h1 class="faint-heading">ABOUT ME</h1>
+                <h2 class="heading">About <span class="underline">Me</span></h2>
+            </div>
+        
+            <div class="about-content">
+                <img src="./img/Home-Image.png" class="about-image" alt="about-image">
+        
+                <div class="about-info">
+                    <h3 class="heading-sub">My Name Is <span class="underline">Praises Amaiyo.</span> </h3>
+                    <p class="text">I am a Highly Motivated and Collaborative individual ho is always eager to Learn new
+                        things
+                        and I am always looking for ways to Improve my Skills. I am also a good Communicator and I am
+                        able
+                        to
+                        Work Effectively in both Technical and Non-Technical environments.</p>
+        
+                    <div class="about-btn">
+                        <a href="#" class="btn hvr-icon-forward">Download CV <i class="fas fa-user hvr-icon"></i></a>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="image">
-                <img src="./img/Home-Image.png" alt="Home image">
+        <section class="accomplishment" id="accomplishment">
+            <div class="accomplishment-heading">
+                <h1 class="faint-heading">ACCOMPLISHMENTS</h1>
+                <h2 class="heading"> My <span class="underline">Accomplishments</span></h2>
             </div>
 
-        </div>
+            <div class="accomplishment-content">
+                <div class="card">
+                    <div class="card-info">
+                        <h1 class="card-date">
+                            2018 - 2021
+                        </h1>
 
-    </section>
+                        <h2 class="card-heading">
+                            Microbiology &dash; <span><em>Higher National Diploma &dash; Upper credit</em></span>
+                        </h2>
 
-    <section class="about grid-2" id="about">
-        <!-- <h2 class="heading grid">About Me</h2> -->
-        <div>
-            <img src="./img/Home-Image.png" class="about-image" alt="about-image">
-        </div>
-        <div class="about-info">
-            <h3 class="heading-sub">My Name Is Praises Amaiyo. </h3>
-            <p class="text">I Am A Highly Motivated And Collaborative Individual Who Is Always Eager To Learn New Things
-                And I Am Always Looking For Ways To Improve My Skills. I Am Also A Great Communicator And I Am Able To
-                Work Effectively In Both Technical And Non-Technical Environments.</p>
-        </div>
-        <!-- <button class="btn-dark">Download CV</button> -->
+                        <p class="card-text">
+                            Research-driven studies on microorganisms (bacteria, yeasts, viruses) - through
+                            testing and
+                            experiments on samples to detect the presence of microorganisms, their growth
+                            pattern and optimal method of containment.
+                        </p>
+                    </div>
 
+                    <div class="card-info">
+                        <h1 class="card-date">
+                            2015 - 2017
+                        </h1>
 
-    </section>
+                        <h2 class="card-heading">
+                            Science laboratory technology &dash; <span><em>National Diploma &dash; Lower
+                                    credit</em></span>
+                        </h2>
+
+                        <p class="card-text">
+                            Acquired hands-on expertise in precise experimentation, data analysis, and upholding
+                            rigorous
+                            scientific standards as well as diverse laboratory techniques, interpreting results and
+                            contributing to groundbreaking research.
+                        </p>
+                    </div>
+
+                    <div class="card-info">
+                        <h1 class="card-date">
+                            2007 - 2013
+                        </h1>
+
+                        <h2 class="card-heading">
+                            Sciences &dash; <span><em>Secondary Education &dash; Credit</em></span>
+                        </h2>
+
+                        <p class="card-text">
+                            Engaged deeply with the realm of science, gaining a solid foundation in subjects such as
+                            biology, chemistry, and physics. Through hands-on experiments and theoretical exploration, I
+                            gained a deep understanding of practical scientific principles.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">Experience</div>
+                <div class="card">Skills</div>
+            </div>
+        </section>
+    </div>
+
 </body>
 
 </html>
