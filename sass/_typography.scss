@@ -15,7 +15,7 @@
 
 .faint-heading {
     position: absolute;
-    top: 10px;
+    top: 0px;
     left: 50%;
     transform: translateX(-50%);
     display: block;
@@ -35,27 +35,123 @@
     font-weight: 400;
 }
 
-.underline {
-    text-decoration: underline;
-}
 
 .btn {
     position: relative;
     font-size: 1.5rem;
-    padding: 1rem;
+    padding: 1rem 1.7rem;
     background-color: var(--orange);
     color: var(--white);
-    display: inline-block;
-    vertical-align: middle;
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    transition-duration: 0.3s;
-    transition-property: transform;
 
     &:hover,
     &:focus,
     &:active {
-        -webkit-transform: translateX(8px);
+        box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+        transform: scaleX(1.1);
+    }
+
+}
+
+.hvr-icon-forward {
+    display: inline-block;
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    transition-duration: 0.1s;
+    transition-property: transform;
+
+    & .hvr-icon {
+        transform: translateZ(0);
+        transition-duration: 0.3s;
+        transition-property: transform;
+        transition-timing-function: ease-out;
+    }
+
+    &:hover .hvr-icon,
+    &:focus .hvr-icon,
+    &:active .hvr-icon {
         transform: translateX(8px);
     }
+}
+
+//General buttons
+.btn-style {
+    position: relative;
+    font-size: 1.5rem;
+    padding: 1rem 1.7rem;
+    background-color: var(--black);
+    color: var(--white);
+    border: 2px solid var(--orange);
+    transition: all .1s;
+
+}
+
+// Accomplishment buttons
+.hvr-bubble-bottom {
+    display: inline-block;
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+
+    &:before {
+        visibility: hidden;
+        pointer-events: none;
+        position: absolute;
+        z-index: -1;
+        content: '';
+        border-style: solid;
+        transition-duration: 0.3s;
+        transition-delay: .2s;
+        transition-property: transform visibility;
+        left: calc(50% - 10px);
+        bottom: 0;
+        border-width: 10px 10px 0 10px;
+        border-color: var(--orange) transparent transparent transparent;
+    }
+
+}
+
+// Handle active state in javascript
+.btn-style.active {
+
+    &:active {
+        background-color: var(--orange);
+    }
+
+    &:not(:active) {
+        transition-delay: 0.5s;
+        /* Delay the background color change */
+        background-color: var(--black);
+    }
+}
+
+// Handle active state in javascript
+.hvr-bubble-bottom.active {
+    &:active:before {
+        visibility: visible;
+        transform: translateY(10px);
+    }
+
+    &:not(:active):before {
+        visibility: hidden;
+
+    }
+}
+
+
+.underline {
+    text-decoration: underline;
+}
+
+.mb-small {
+    margin-bottom: 2rem;
+}
+
+.mb-big {
+    margin-bottom: 4rem;
+}
+
+.mb-bigger {
+    margin-bottom: 6rem;
 }
