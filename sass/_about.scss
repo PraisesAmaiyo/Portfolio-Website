@@ -1,9 +1,8 @@
-.about {
+.about,
+.skills,
+.services {
    grid-column: center-start / center-end;
-   margin-bottom: 10rem;
    position: relative;
-
-   &-heading {}
 
    &-content {
       display: grid;
@@ -19,5 +18,20 @@
 
    &-btn {
       width: 100%;
+   }
+
+   &-tab {
+      display: flex;
+      gap: 1rem;
+      width: 100%;
+      justify-content: space-between;
+
+      .card {
+         width: 50%;
+
+         &:not(:last-child) {
+            margin-bottom: 0;
+         }
+      }
    }
 }

@@ -1,7 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap");
+.--orange {
+  color: #d1593c; }
+
 :root {
   --orange: #d1593c;
-  --black: #324151;
+  --black: rgba(50, 65, 81, 0.384);
   --white: #f7f5f2;
   --grey: #dfdfde;
   --faint: #dfdfde3e;
@@ -179,11 +182,17 @@ section {
     row-gap: 0rem;
     column-gap: 3rem;
     grid-template-rows: min-content 1fr; }
-  .card-skills .skills {
-    font-size: 1.8rem;
-    padding-bottom: 1rem;
-    margin-bottom: 2rem;
-    border-bottom: 2px solid var(--orange); }
+  .card-skills {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem; }
+    .card-skills .card-skill {
+      width: 50%; }
+      .card-skills .card-skill .skills {
+        font-size: 1.8rem;
+        padding-bottom: .5rem;
+        margin-bottom: 1rem;
+        border-bottom: 4px solid var(--orange); }
   .card-header {
     grid-column: 1/-1;
     font-size: 3rem;
@@ -309,7 +318,6 @@ section {
 
 .accomplishment {
   grid-column: center-start / center-end;
-  margin-bottom: 100rem;
   position: relative; }
   .accomplishment-btn {
     display: flex;
@@ -319,20 +327,42 @@ section {
   .accomplishment-content {
     margin-bottom: 5rem; }
 
-.about {
+.about,
+.skills,
+.services {
   grid-column: center-start / center-end;
-  margin-bottom: 10rem;
   position: relative; }
-  .about-content {
+  .about-content,
+  .skills-content,
+  .services-content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 5rem; }
-  .about-image {
+  .about-image,
+  .skills-image,
+  .services-image {
     width: 100%;
     object-fit: cover;
     border: 2px solid #495665; }
-  .about-btn {
+  .about-btn,
+  .skills-btn,
+  .services-btn {
     width: 100%; }
+  .about-tab,
+  .skills-tab,
+  .services-tab {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    justify-content: space-between; }
+    .about-tab .card,
+    .skills-tab .card,
+    .services-tab .card {
+      width: 50%; }
+      .about-tab .card:not(:last-child),
+      .skills-tab .card:not(:last-child),
+      .services-tab .card:not(:last-child) {
+        margin-bottom: 0; }
 
 header {
   position: fixed;

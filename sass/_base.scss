@@ -1,8 +1,15 @@
   @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap');
 
+  .--orange {
+     color: #d1593c
+  }
+
+  ;
+
+
   :root {
      --orange: #d1593c;
-     --black: #324151;
+     --black: rgba(50, 65, 81, 0.384);
      --white: #f7f5f2;
      --grey: #dfdfde;
      --faint: #dfdfde3e;
