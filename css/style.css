@@ -20,6 +20,7 @@
 
 html {
   font-size: 62.5%;
+  line-height: 1.5;
   overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-padding-top: 6rem; }
@@ -38,7 +39,7 @@ body {
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] minmax(min-content, 120rem) [center-end] minmax(6rem, 1fr) [full-end]; }
 
 section {
-  padding: 2rem 5%; }
+  padding: 2rem; }
 
 ::-webkit-scrollbar {
   width: 0.8rem; }
@@ -107,7 +108,9 @@ section {
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   transition-duration: 0.1s;
-  transition-property: transform; }
+  transition-property: transform;
+  width: 100%;
+  text-align: center; }
   .hvr-icon-forward .hvr-icon {
     transform: translateZ(0);
     transition-duration: 0.3s;
@@ -163,8 +166,74 @@ section {
 .hvr-bubble-bottom.active:not(:active):before {
   visibility: hidden; }
 
+.card {
+  background-color: var(--black);
+  padding: 2rem;
+  border: 1px solid var(--faint); }
+  .card:not(:last-child) {
+    margin-bottom: 5rem; }
+  .card-certificate {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    row-gap: 0rem;
+    column-gap: 3rem;
+    grid-template-rows: min-content 1fr; }
+  .card-skills .skills {
+    font-size: 1.8rem;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--orange); }
+  .card-header {
+    grid-column: 1/-1;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 3rem; }
+  .card-info {
+    padding-bottom: 2rem;
+    height: 15rem; }
+    .card-info:not(:last-child) {
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--faint); }
+  .card-date {
+    color: var(--orange);
+    font-size: 2rem;
+    padding-bottom: 2rem; }
+  .card-heading {
+    font-size: 1.8rem;
+    margin-bottom: 1rem; }
+    .card-heading span {
+      font-weight: 400;
+      font-size: 1.4rem; }
+  .card-text {
+    font-size: 1.7rem;
+    color: var(--grey); }
+
+.text-tabs {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem; }
+  .text-tabs .text-tab {
+    background-color: var(--orange);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+    width: 100%; }
+    .text-tabs .text-tab h1 {
+      font-size: 2.5rem; }
+    .text-tabs .text-tab p {
+      font-size: 1.5rem; }
+
 .underline {
   text-decoration: underline; }
+
+.text-center {
+  text-align: center; }
+
+.mt-small {
+  margin-top: 2rem; }
 
 .mb-small {
   margin-bottom: 2rem; }
@@ -250,49 +319,6 @@ section {
   .accomplishment-content {
     margin-bottom: 5rem; }
 
-.card {
-  background-color: var(--black);
-  padding: 2rem;
-  border: 1px solid var(--faint); }
-  .card:not(:last-child) {
-    margin-bottom: 5rem; }
-  .card-certificate {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
-    row-gap: 0rem;
-    column-gap: 3rem;
-    grid-template-rows: min-content 1fr; }
-  .card-skills .skills {
-    font-size: 1.8rem;
-    padding-bottom: 1rem;
-    margin-bottom: 2rem;
-    border-bottom: 2px solid var(--orange); }
-  .card-header {
-    grid-column: 1/-1;
-    font-size: 3rem;
-    text-align: center;
-    margin-bottom: 3rem; }
-  .card-info {
-    padding-bottom: 2rem;
-    height: 15rem; }
-    .card-info:not(:last-child) {
-      margin-bottom: 2rem;
-      border-bottom: 1px solid var(--faint); }
-  .card-date {
-    color: var(--orange);
-    font-size: 2rem;
-    padding-bottom: 2rem; }
-  .card-heading {
-    font-size: 1.8rem;
-    margin-bottom: 1rem; }
-    .card-heading span {
-      font-weight: 400;
-      font-size: 1.4rem; }
-  .card-text {
-    font-size: 1.4rem;
-    color: var(--grey); }
-
 .about {
   grid-column: center-start / center-end;
   margin-bottom: 10rem;
@@ -300,14 +326,13 @@ section {
   .about-content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 5rem;
-    align-items: center; }
+    gap: 5rem; }
   .about-image {
     width: 100%;
     object-fit: cover;
     border: 2px solid #495665; }
   .about-btn {
-    margin-top: 2.5rem; }
+    width: 100%; }
 
 header {
   position: fixed;

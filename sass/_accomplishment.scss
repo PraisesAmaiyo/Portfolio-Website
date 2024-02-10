@@ -1,89 +1,21 @@
 .accomplishment {
-    grid-column: center-start / center-end;
-    margin-bottom: 100rem;
-    position: relative;
+   grid-column: center-start / center-end;
+   margin-bottom: 100rem;
+   position: relative;
 
-    &-btn {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        text-align: center;
-        // margin-bottom: ;
+   &-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      text-align: center;
+      // margin-bottom: ;
 
-    }
+   }
 
-    &-content {
-        // display: grid;
-        // grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-        // grid-gap: 7rem;
-        margin-bottom: 5rem;
-    }
-}
-
-.card {
-    background-color: var(--black);
-    padding: 2rem;
-    border: 1px solid var(--faint);
-
-    &:not(:last-child) {
-        margin-bottom: 5rem;
-    }
-
-    // width: 70%;
-
-    &-certificate {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        width: 100%;
-        row-gap: 0rem;
-        column-gap: 3rem;
-        grid-template-rows: min-content 1fr;
-    }
-
-    &-skills {
-        .skills {
-            font-size: 1.8rem;
-            padding-bottom: 1rem;
-            margin-bottom: 2rem;
-            border-bottom: 2px solid var(--orange);
-        }
-    }
-
-    &-header {
-        grid-column: 1/-1;
-        font-size: 3rem;
-        text-align: center;
-        margin-bottom: 3rem;
-    }
-
-    &-info {
-        padding-bottom: 2rem;
-        height: 15rem;
-
-        &:not(:last-child) {
-            margin-bottom: 2rem;
-            border-bottom: 1px solid var(--faint);
-        }
-    }
-
-    &-date {
-        color: var(--orange);
-        font-size: 2rem;
-        padding-bottom: 2rem;
-    }
-
-    &-heading {
-        font-size: 1.8rem;
-        margin-bottom: 1rem;
-
-        & span {
-            font-weight: 400;
-            font-size: 1.4rem;
-        }
-    }
-
-    &-text {
-        font-size: 1.4rem;
-        color: var(--grey);
-    }
+   &-content {
+      // display: grid;
+      // grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+      // grid-gap: 7rem;
+      margin-bottom: 5rem;
+   }
 }
