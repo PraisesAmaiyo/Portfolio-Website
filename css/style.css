@@ -38,11 +38,9 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 100vh min-content max-content repeat(3, min-content);
-  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] minmax(min-content, 120rem) [center-end] minmax(6rem, 1fr) [full-end]; }
-
-section {
-  padding: 2rem; }
+  grid-template-rows: 100vh max-content max-content repeat(3, min-content);
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] minmax(min-content, 120rem) [center-end] minmax(6rem, 1fr) [full-end];
+  justify-content: center; }
 
 ::-webkit-scrollbar {
   width: 0.8rem; }
@@ -65,7 +63,7 @@ section {
   background: var(--orange); }
 
 .heading {
-  margin: 10rem;
+  margin: 2rem;
   text-align: center;
   font-size: 4rem;
   grid-column: 1 / -1;
@@ -172,27 +170,28 @@ section {
 .card {
   background-color: var(--black);
   padding: 2rem;
-  border: 1px solid var(--faint); }
+  border: 1px solid var(--faint);
+  width: 80%; }
   .card:not(:last-child) {
     margin-bottom: 5rem; }
   .card-certificate {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 100%;
     row-gap: 0rem;
     column-gap: 3rem;
     grid-template-rows: min-content 1fr; }
   .card-skills {
     display: flex;
     justify-content: space-between;
-    gap: 4rem; }
+    gap: 4rem;
+    width: 100%; }
     .card-skills .card-skill {
       width: 50%; }
       .card-skills .card-skill .skills {
         font-size: 1.8rem;
         padding-bottom: .5rem;
         margin-bottom: 1rem;
-        border-bottom: 4px solid var(--orange); }
+        border-bottom: 2px solid var(--orange); }
   .card-header {
     grid-column: 1/-1;
     font-size: 3rem;
@@ -200,7 +199,7 @@ section {
     margin-bottom: 3rem; }
   .card-info {
     padding-bottom: 2rem;
-    height: 15rem; }
+    height: fit-content; }
     .card-info:not(:last-child) {
       margin-bottom: 2rem;
       border-bottom: 1px solid var(--faint); }
@@ -264,6 +263,8 @@ section {
     align-items: center;
     flex-wrap: wrap;
     gap: 4rem; }
+    .home .box-container .typing-text {
+      text-transform: capitalize; }
   .home .image {
     text-align: center;
     -webkit-box-flex: 1;
@@ -318,25 +319,42 @@ section {
 
 .accomplishment {
   grid-column: center-start / center-end;
-  position: relative; }
+  position: relative;
+  display: grid;
+  justify-content: center; }
   .accomplishment-btn {
     display: flex;
     align-items: center;
     justify-content: space-around;
     text-align: center; }
   .accomplishment-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 5rem; }
+
+section {
+  padding: 2rem;
+  margin-bottom: 5rem; }
 
 .about,
 .skills,
 .services {
   grid-column: center-start / center-end;
   position: relative; }
-  .about-content,
-  .skills-content,
-  .services-content {
+  .about .about-content,
+  .about .skills-content,
+  .about .services-content,
+  .skills .about-content,
+  .skills .skills-content,
+  .skills .services-content,
+  .services .about-content,
+  .services .skills-content,
+  .services .services-content {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
     gap: 5rem; }
   .about-image,
   .skills-image,
@@ -348,21 +366,17 @@ section {
   .skills-btn,
   .services-btn {
     width: 100%; }
-  .about-tab,
-  .skills-tab,
-  .services-tab {
-    display: flex;
-    gap: 1rem;
-    width: 100%;
-    justify-content: space-between; }
-    .about-tab .card,
-    .skills-tab .card,
-    .services-tab .card {
-      width: 50%; }
-      .about-tab .card:not(:last-child),
-      .skills-tab .card:not(:last-child),
-      .services-tab .card:not(:last-child) {
-        margin-bottom: 0; }
+
+.services-tab {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 40%));
+  grid-gap: 2rem;
+  justify-content: center; }
+
+.card-wide {
+  background-color: black;
+  padding: 2rem;
+  width: 100%; }
 
 header {
   position: fixed;

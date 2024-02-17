@@ -1,12 +1,23 @@
+section {
+   padding: 2rem;
+   margin-bottom: 5rem;
+}
+
 .about,
 .skills,
 .services {
    grid-column: center-start / center-end;
    position: relative;
 
-   &-content {
+   // display: grid;
+   // justify-content: center;
+
+
+   .about-content,
+   .skills-content,
+   .services-content {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
       gap: 5rem;
    }
 
@@ -20,18 +31,17 @@
       width: 100%;
    }
 
-   &-tab {
-      display: flex;
-      gap: 1rem;
-      width: 100%;
-      justify-content: space-between;
+}
 
-      .card {
-         width: 50%;
+.services-tab {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 40%));
+   grid-gap: 2rem;
+   justify-content: center;
+}
 
-         &:not(:last-child) {
-            margin-bottom: 0;
-         }
-      }
-   }
+.card-wide {
+   background-color: black;
+   padding: 2rem;
+   width: 100%;
 }

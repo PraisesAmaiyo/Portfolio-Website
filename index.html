@@ -9,8 +9,11 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
    <link rel="stylesheet" href="css/style.css" />
    <script defer src="JS/script.js"></script>
+
+
    <title>Praises Amaiyo - Portfolio Website</title>
 </head>
 
@@ -41,7 +44,7 @@
 
             <div class="content">
                <div class="text">
-                  <h2>Hi there!</h2>
+                  <h2>Hi, I'm Praises Amaiyo!</h2>
                   <h1>I Am a <span class="typing-text"></span></h1>
                   <p>I'm a passionate front-end web developer with 2 years of experience building user-friendly web
                      applications.</p>
@@ -315,27 +318,43 @@
          <div class="services-heading">
             <h2 class="heading">My Services</h2>
          </div>
-
          <div class="services-tab">
-
-            <div class="card">
-               <div class="card-wide">
-                  <h1>Service Tab 1</h1>
+            <div class="card-wide">
+               <div class="icon">
+                  =/=
                </div>
-
+               <h2 class="card-text">Web Design</h2>
+               <p>Building your ideas to life online, making sure your website looks great and helps your business
+                  shine online.</p>
             </div>
 
-            <div class="card">
-               <div class="card-wide">
-                  <h1>Service Tab 2</h1>
+            <div class="card-wide">
+               <div class="icon">
+                  =/=
                </div>
+               <h2 class="card-text">Web Design</h2>
+               <p>"Bringing brands to life with eye-catching logos and designs that make them stand out. From
+                  stunning
+                  flyers to creating an online presence that gets noticed, I help brands shine.</p>
 
             </div>
          </div>
       </section>
-   </div>
 
-   <section class="mb-bigger" id=""></section>
+      <!-- <section class="mb-bigger" id=""></section> -->
+
+      <script src="JS/typed.js"></script>
+
+      <!-- Typed Script -->
+      <script>
+         var typed = new Typed('.typing-text', {
+
+            strings: ['Web developer', 'web designer', 'graphic designer'],
+            typeSpeed: 120,
+            loop: true
+         });
+      </script>
+   </div>
 </body>
 
 </html>

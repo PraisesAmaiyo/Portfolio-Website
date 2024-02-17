@@ -1,91 +1,95 @@
 .home {
-    padding: 0rem 5%;
-    grid-column: center-start / center-end;
-    grid-row: 1/2;
+   padding: 0rem 5%;
+   grid-column: center-start / center-end;
+   grid-row: 1/2;
 
-    & .box-container {
-        min-height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 4rem;
-    }
+   & .box-container {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 4rem;
 
-    & .image {
-        text-align: center;
-        -webkit-box-flex: 1;
-        -ms-flex: 1 1 40rem;
-        flex: 1 1 40rem;
+      .typing-text {
+         text-transform: capitalize;
+      }
+   }
 
-        & img {
-            height: 40rem;
-            width: 40rem;
-            border: 2px solid #495665;
-            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-            object-fit: cover;
-            animation: changeProperties 10s infinite;
-        }
-    }
+   & .image {
+      text-align: center;
+      -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+      flex: 1 1 40rem;
 
-    & .content {
-        flex: 1 1 40rem;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 7rem;
+      & img {
+         height: 40rem;
+         width: 40rem;
+         border: 2px solid #495665;
+         border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+         object-fit: cover;
+         animation: changeProperties 10s infinite;
+      }
+   }
 
-        & h2 {
-            font-size: 2.5rem;
-            font-weight: 400;
+   & .content {
+      flex: 1 1 40rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 7rem;
+
+      & h2 {
+         font-size: 2.5rem;
+         font-weight: 400;
+         color: var(--orange);
+      }
+
+      & h1 {
+         font-size: 4rem;
+         color: var(--white);
+         padding: 1rem 0;
+         text-transform: none;
+
+         & span {
             color: var(--orange);
-        }
+         }
+      }
 
-        & h1 {
-            font-size: 4rem;
-            color: var(--white);
-            padding: 1rem 0;
-            text-transform: none;
+      & p {
 
-            & span {
-                color: var(--orange);
-            }
-        }
-
-        & p {
-
-            font-size: 1.7rem;
-            font-weight: 400;
-            color: var(--white);
-            padding-bottom: 2rem;
-            line-height: 1.5;
-        }
-    }
+         font-size: 1.7rem;
+         font-weight: 400;
+         color: var(--white);
+         padding-bottom: 2rem;
+         line-height: 1.5;
+      }
+   }
 }
 
 @keyframes changeProperties {
-    0% {
-        border-color: #495665;
-        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    }
+   0% {
+      border-color: #495665;
+      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+   }
 
-    33% {
-        border-color: #5b6774;
-        border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
-        // border-radius: 61% 39% 22% 78% / 64% 66% 34% 36%;
-    }
+   33% {
+      border-color: #5b6774;
+      border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+      // border-radius: 61% 39% 22% 78% / 64% 66% 34% 36%;
+   }
 
-    66% {
-        border-color: #424d5b;
-        border-radius: 61% 39% 22% 78% / 64% 66% 34% 36%;
-        // border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    }
+   66% {
+      border-color: #424d5b;
+      border-radius: 61% 39% 22% 78% / 64% 66% 34% 36%;
+      // border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+   }
 
-    100% {
-        border-color: #424d5b;
-        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-        // border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    }
+   100% {
+      border-color: #424d5b;
+      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+      // border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+   }
 }

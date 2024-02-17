@@ -58,13 +58,11 @@
 
   .container {
      display: grid;
-     grid-template-rows: 100vh min-content max-content repeat(3, min-content);
+     grid-template-rows: 100vh max-content max-content repeat(3, min-content);
      grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] minmax(min-content, 120rem) [center-end] minmax(6rem, 1fr) [full-end];
+     justify-content: center;
   }
 
-  section {
-     padding: 2rem;
-  }
 
   ::-webkit-scrollbar {
      width: 0.8rem;

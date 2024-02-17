@@ -2,18 +2,22 @@
    grid-column: center-start / center-end;
    position: relative;
 
+   display: grid;
+   justify-content: center;
+
    &-btn {
       display: flex;
       align-items: center;
       justify-content: space-around;
       text-align: center;
-      // margin-bottom: ;
    }
 
    &-content {
-      // display: grid;
-      // grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-      // grid-gap: 7rem;
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+      justify-content: center;
+      align-items: center;
       margin-bottom: 5rem;
    }
 }
