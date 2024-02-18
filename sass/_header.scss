@@ -1,15 +1,18 @@
 .home {
-   padding: 0rem 5%;
+   padding: 0rem 1%;
    grid-column: center-start / center-end;
    grid-row: 1/2;
+   display: grid;
+   align-items: center;
 
    & .box-container {
-      min-height: 100vh;
+      height: 105vh;
+      // max-height: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      gap: 4rem;
+      gap: 2rem;
 
       .typing-text {
          text-transform: capitalize;

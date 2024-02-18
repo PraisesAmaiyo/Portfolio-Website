@@ -13,7 +13,7 @@
      --white: #f7f5f2;
      --grey: #dfdfde;
      --faint: #dfdfde3e;
-     --rrr: rgba(24, 40, 56, 0.924);
+     --dark: rgba(24, 40, 56, 0.924);
   }
 
   $font-primary: 'lora', serif;
@@ -58,7 +58,7 @@
 
   .container {
      display: grid;
-     grid-template-rows: 100vh max-content max-content repeat(3, min-content);
+     grid-template-rows: max-content max-content max-content repeat(3, min-content);
      grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] minmax(min-content, 120rem) [center-end] minmax(6rem, 1fr) [full-end];
      justify-content: center;
   }
@@ -117,3 +117,9 @@
   //     -webkit-transform: translateX(4px);
   //     transform: translateX(4px);
   // }
+
+  //   button[class^='btn-']:hover,
+  //   a[class^='btn-']:hover,
+  //   input[class^='btn-']:hover {
+  //      background-color: red;
+  //   }
