@@ -21,3 +21,66 @@
       margin-bottom: 5rem;
    }
 }
+
+
+.education,
+.experience {
+
+   &-item {
+      display: grid;
+      grid-template-columns: 1fr max-content 1fr;
+      gap: 1rem;
+
+      & .content {
+         height: max-content;
+      }
+
+      &__date {
+         background: var(--black);
+         color: var(--white);
+         padding: 0.5rem 1.5rem;
+         font-size: 1.8rem;
+         border-radius: 50rem;
+         width: max-content;
+      }
+
+      & i {
+         position: relative;
+         height: 5rem;
+         width: 5rem;
+         border-radius: 50%;
+         line-height: 5rem;
+         text-align: center;
+         font-size: 2rem;
+         color: var(--white);
+         background: var(--orange);
+         z-index: 2;
+      }
+
+      .experience-line,
+      .education-line {
+         height: 100%;
+         width: 2px;
+         background-color: var(--orange);
+         display: block;
+         transform: translate(19px, -7px);
+      }
+
+      & h3 {
+         font-size: 2rem;
+         color: var(--white);
+         padding: 1rem 0 1rem 0;
+      }
+
+      & h2 {
+         font-size: 1.5rem;
+         color: var(--white);
+         padding: .5rem 0;
+      }
+
+      & h2 em {
+         font-size: 1.5rem;
+         color: rgba(255, 255, 255, 0.769);
+      }
+   }
+}

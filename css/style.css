@@ -340,6 +340,58 @@ body {
     align-items: center;
     margin-bottom: 5rem; }
 
+.education-item,
+.experience-item {
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  gap: 1rem; }
+  .education-item .content,
+  .experience-item .content {
+    height: max-content; }
+  .education-item__date,
+  .experience-item__date {
+    background: var(--black);
+    color: var(--white);
+    padding: 0.5rem 1.5rem;
+    font-size: 1.8rem;
+    border-radius: 50rem;
+    width: max-content; }
+  .education-item i,
+  .experience-item i {
+    position: relative;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--white);
+    background: var(--orange);
+    z-index: 2; }
+  .education-item .experience-line,
+  .education-item .education-line,
+  .experience-item .experience-line,
+  .experience-item .education-line {
+    height: 100%;
+    width: 2px;
+    background-color: var(--orange);
+    display: block;
+    transform: translate(19px, -7px); }
+  .education-item h3,
+  .experience-item h3 {
+    font-size: 2rem;
+    color: var(--white);
+    padding: 1rem 0 1rem 0; }
+  .education-item h2,
+  .experience-item h2 {
+    font-size: 1.5rem;
+    color: var(--white);
+    padding: .5rem 0; }
+  .education-item h2 em,
+  .experience-item h2 em {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.769); }
+
 section {
   padding: 2rem;
   margin-bottom: 5rem; }
@@ -390,6 +442,32 @@ section {
     .services-tab .card-wide .icon {
       font-size: 2rem;
       margin-bottom: 1rem; }
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  grid-gap: 1rem;
+  justify-content: center; }
+
+.skill-box {
+  display: flex;
+  column-gap: 1rem;
+  align-items: center;
+  padding: 1rem 0;
+  border-radius: 5px;
+  width: 100%; }
+
+.skill-box img {
+  width: 30px;
+  height: 30px; }
+
+.skill-box span {
+  font-weight: bold;
+  font-size: 1.5rem;
+  white-space: nowrap;
+  /* Prevent text from wrapping */
+  overflow: hidden;
+  /* Hide any overflowing text */ }
 
 header {
   position: fixed;

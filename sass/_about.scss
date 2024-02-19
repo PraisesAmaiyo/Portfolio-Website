@@ -17,6 +17,7 @@ section {
       height: max-content;
       display: grid;
       grid-template-columns: repeat(2, 50%);
+      // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2rem;
       justify-content: center;
       align-items: center;
@@ -33,7 +34,6 @@ section {
    &-btn {
       width: 100%;
    }
-
 }
 
 .services-tab {
@@ -59,4 +59,35 @@ section {
       }
 
    }
+}
+
+.skills-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+   grid-gap: 1rem;
+   justify-content: center;
+}
+
+.skill-box {
+   display: flex;
+   column-gap: 1rem;
+   align-items: center;
+   padding: 1rem 0;
+   border-radius: 5px;
+   width: 100%;
+}
+
+.skill-box img {
+   width: 30px;
+   height: 30px;
+}
+
+.skill-box span {
+   font-weight: bold;
+   font-size: 1.5rem;
+   white-space: nowrap;
+   /* Prevent text from wrapping */
+   overflow: hidden;
+   /* Hide any overflowing text */
+   // text-overflow: ellipsis;
 }
