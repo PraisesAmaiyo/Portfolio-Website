@@ -11,13 +11,20 @@
    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
    <link rel="stylesheet" href="css/style.css" />
-   <script defer src="JS/script.js"></script>
+   <script defer type="module" src="JS/script.js"></script>
+   <script defer type="module" src="JS/swiper.js"></script>
 
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+   <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
 
    <title>Praises Amaiyo - Portfolio Website</title>
 </head>
 
 <body>
+
    <div class="container">
 
       <header class="header">
@@ -157,50 +164,6 @@
                <span>PhotoShop</span>
             </div>
          </div>
-         <!-- Add more skill boxes as needed -->
-
-
-         <div class="card card-skills">
-            <div class="card-skill">
-               <h2 class="skills">
-                  React.js
-               </h2>
-
-               <h2 class="skills">
-                  JavaScript
-               </h2>
-
-               <h2 class="skills">
-                  Tailwind CSS
-               </h2>
-               <h2 class="skills">
-                  CSS/SASS
-               </h2>
-
-               <h2 class="skills">
-                  HTML
-               </h2>
-            </div>
-
-            <div class="card-skill">
-               <h2 class="skills">
-                  MongoDB
-               </h2>
-
-               <h2 class="skills">
-                  Node.js
-               </h2>
-
-               <h2 class="skills">
-                  Firebase
-               </h2>
-
-               <h2 class="skills">
-                  SQL
-               </h2>
-
-            </div>
-         </div>
       </section>
 
       <section class="accomplishment" id="accomplishment">
@@ -211,8 +174,6 @@
          <div class="accomplishment-btn mb-big">
 
             <a href="#" class="btn-style active hvr-bubble-bottom">Education <i class="fas fa-user "></i></a>
-
-            <a href="#" class="btn-style hvr-bubble-bottom">Certifications <i class="fas fa-user hvr-icon "></i></a>
 
             <a href="#" class="btn-style hvr-bubble-bottom">Work <i class="fas fa-user "></i></a>
          </div>
@@ -235,7 +196,6 @@
 
                <div class="education-item">
                   <div></div>
-
                   <div>
                      <i class="fas fa-graduation-cap"></i>
                      <span class="education-line"></span>
@@ -289,7 +249,7 @@
                   </div>
 
                   <div>
-                     <i class="fas fa-graduation-cap"></i>
+                     <i class="fas fa-briefcase"></i>
                      <span class="experience-line"></span>
                   </div>
                </div>
@@ -297,8 +257,8 @@
                <div class="experience-item">
                   <div></div>
                   <div>
-                     <i class="fas fa-graduation-cap"></i>
-                     <span class="experience-line"></span>
+                     <i class="fas fa-briefcase"></i>
+                     <!-- <span class="experience-line"></span> -->
                   </div>
 
                   <div class="content">
@@ -311,145 +271,6 @@
                   </div>
                </div>
             </div>
-
-            <!-- <div class="card">
-               <h1 class="card-header">Education</h1>
-               <div class="card-info">
-                  <h1 class="card-date">
-                     2018 - 2021
-                  </h1>
-
-                  <h2 class="card-heading">
-                     Microbiology &dash; <span><em>Higher National Diploma &dash; Upper credit</em></span>
-                  </h2>
-               </div>
-
-               <div class="card-info">
-                  <h1 class="card-date">
-                     2015 - 2017
-                  </h1>
-
-                  <h2 class="card-heading">
-                     Science laboratory technology &dash; <span><em>National Diploma &dash; Lower
-                           credit</em></span>
-                  </h2>
-               </div>
-
-               <div class="card-info">
-                  <h1 class="card-date">
-                     2007 - 2013
-                  </h1>
-
-                  <h2 class="card-heading">
-                     Sciences &dash; <span><em>Secondary Education &dash; Credit</em></span>
-                  </h2>
-               </div>
-            </div>
-
-            <div class="card card-certificate">
-               <h1 class="card-header">Certifications</h1>
-               <div class="card-a">
-                  <div class="card-info">
-                     <h1 class="card-date">
-                        2023
-                     </h1>
-
-                     <h2 class="card-heading">
-                        Modern JavaScript From The Beginning 2.0 - 2023 Revamp &dash;
-                        <span><em>Brad Traversy &dash; Udemy</em></span>
-                     </h2>
-                  </div>
-
-                  <div class="card-info">
-                     <h1 class="card-date">
-                        2023
-                     </h1>
-
-                     <h2 class="card-heading">
-                        Advanced CSS and SASS: Flexbox, Grid, Animations and More! &dash;
-                        <span><em>Jonas Schmedtmann &dash; Udemy</em></span>
-                     </h2>
-                  </div>
-
-                  <div class="card-info">
-                     <h1 class="card-date">
-                        2023
-                     </h1>
-
-                     <h2 class="card-heading">
-                        Build Responsive Real-World Websites with HTML and CSS &dash; <span><em>Jonas
-                              Schmedtmann &dash; Udemy</em></span>
-                     </h2>
-                  </div>
-
-                  <div class="card-info">
-                     <h1 class="card-date">
-                        2023
-                     </h1>
-
-                     <h2 class="card-heading">
-                        Getting started with Git and GitHub &dash; <span><em> IBM &dash; Coursera</em></span>
-                     </h2>
-                  </div>
-
-
-                  <div class="card-info">
-                     <h1 class="card-date">
-                        2023
-                     </h1>
-
-                     <h2 class="card-heading">
-                        Introduction to Web Development with HTML, CSS, JavaScript &dash; <span><em> IBM &dash;
-                              Coursera</em></span>
-                     </h2>
-                  </div>
-               </div>
-
-               <div class="card-b">
-
-                  <div class="card-info">
-                     <h1 class="card-date">
-                        2023
-                     </h1>
-
-                     <h2 class="card-heading">
-                        Introduction to Cloud Computing &dash; <span><em> IBM &dash; Coursera</em></span>
-                     </h2>
-                  </div>
-
-                  <div class="card-info">
-                     <h1 class="card-date">
-                        2022
-                     </h1>
-
-                     <h2 class="card-heading">
-                        Social Media Marketing &dash; <span><em>HubSpot Academy</em></span>
-                     </h2>
-                  </div>
-
-                  <div class="card-info">
-                     <h1 class="card-date">
-                        2021
-                     </h1>
-
-                     <h2 class="card-heading">
-                        Email Marketing &dash; <span><em>HubSpot Academy</em></span>
-                     </h2>
-                  </div>
-
-                  <div class="card-info">
-                     <h1 class="card-date">
-                        2021
-                     </h1>
-
-                     <h2 class="card-heading">
-                        Fundamentals of Digital Marketing &dash; <span><em>Secondary Education &dash;
-                              Credit</em></span>
-                     </h2>
-
-                  </div>
-               </div>
-            </div> -->
          </div>
       </section>
 
@@ -457,10 +278,11 @@
          <div class="services-heading">
             <h2 class="heading">My Services</h2>
          </div>
+
          <div class="services-tab">
             <div class="card-wide">
-               <div class="icon">
-                  <i class="fas fa-user hvr-icon"></i>
+               <div class="icon --orange">
+                  <i class="fas fa-code"></i>
                </div>
                <h2 class="card-heading">Web Design</h2>
                <p class="card-text">Building your ideas to life online, making sure your website looks great and helps
@@ -469,8 +291,8 @@
             </div>
 
             <div class="card-wide">
-               <div class="icon">
-                  <i class="fas fa-user "></i>
+               <div class="icon --orange">
+                  <i class="fas fa-paint-brush"></i>
                </div>
                <h2 class="card-heading">Graphics Design</h2>
                <p class="card-text">Bringing brands to life with eye-catching logos and designs that make them stand
@@ -479,11 +301,28 @@
                   flyers to creating an online presence that gets noticed, I help brands shine.</p>
             </div>
          </div>
+
+         <div class="swiper">
+            <div class="swiper-wrapper">
+               <div class="swiper-slide">Slide 1</div>
+               <div class="swiper-slide">Slide 2</div>
+               <div class="swiper-slide">Slide 3</div>
+               <div class="swiper-slide">Slide 4</div>
+               <div class="swiper-slide">Slide 5</div>
+               <div class="swiper-slide">Slide 6</div>
+               <div class="swiper-slide">Slide 7</div>
+               <div class="swiper-slide">Slide 8</div>
+               <div class="swiper-slide">Slide 9</div>
+               <div class="swiper-slide">Slide 10</div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+         </div>
       </section>
 
-      <!-- <section class="mb-bigger" id=""></section> -->
-
       <script src="JS/typed.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
       <!-- Typed Script -->
       <script>
@@ -500,10 +339,7 @@
 </html>
 
 <!-- To dos -->
-
-<!-- Merge the education and certification as one. certification should be Web Development - Udemy, IBM- Coursera -->
-
-<!-- Change the skill layout to autofit boxes with their logos -->
-
 <!-- Add a parrf for social media handles -->
 <!-- Portfolio section -->
+<!-- On the selection of a project option to view image or live website -->
+<!-- Swiper -->
