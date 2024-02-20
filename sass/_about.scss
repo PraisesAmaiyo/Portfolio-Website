@@ -94,17 +94,35 @@ section {
 }
 
 .swiper {
-   // grid-column: center-start / center-end;
    margin: 10rem auto;
-   width: 300px;
-   height: 200px;
+   width: 80%;
+   height: min-content;
 
-   .swiper-slide {
-      background-color: #ccc;
-      display: flex;
+   &-wrapper {
       justify-content: center;
       align-items: center;
-      font-size: 3rem;
-      color: black;
    }
+}
+
+.swiper-slide {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.portfolio-info {
+   display: grid;
+   grid-template-columns: 40% 40%;
+   /* Image on the left, write-up on the right */
+   gap: 20px;
+   /* Adjust the gap between image and text */
+}
+
+.portfolio-info img {
+   max-width: 100%;
+   /* Ensure the image does not exceed its container */
+}
+
+.portfolio-text {
+   /* Add styling for the text section as needed */
 }
