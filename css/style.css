@@ -470,26 +470,44 @@ section {
   position: relative;
   display: grid; }
 
-.swiper {
+div.swiper {
   margin: 10rem auto;
-  width: 80%;
-  height: auto; }
-  .swiper .swiper-wrapper .swiper-slide {
-    width: 60%;
+  width: 95%;
+  height: auto;
+  position: static; }
+  div.swiper .swiper-wrapper .swiper-slide {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center; }
-  .swiper .swiper-wrapper .portfolio-info {
+  div.swiper .swiper-wrapper .portfolio-info {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-columns: 40% 40%;
     gap: 3rem;
     justify-content: center; }
-    .swiper .swiper-wrapper .portfolio-info__img {
+    div.swiper .swiper-wrapper .portfolio-info__img {
       max-width: 100%;
-      height: max-content;
+      height: auto;
       border-radius: 10px; }
-    .swiper .swiper-wrapper .portfolio-info__text {
+    div.swiper .swiper-wrapper .portfolio-info__text {
       padding-top: 1rem; }
+  div.swiper-pagination {
+    margin-top: 2rem; }
+
+div.swiper div.swiper-pagination {
+  bottom: 0; }
+
+div.swiper-button-prev::after,
+div.swiper-button-next::after {
+  font-size: 20px; }
+
+div.swiper-button-prev {
+  top: 60%;
+  left: 0; }
+
+div.swiper-button-next {
+  top: 60%;
+  right: 0; }
 
 header {
   position: fixed;
