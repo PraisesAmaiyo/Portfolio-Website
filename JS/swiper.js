@@ -1,7 +1,7 @@
 // Websites
 var swiper = new Swiper('.swiper-1', {
   slidesPerView: 1,
-  spaceBetween: 30,
+  spaceBetween: 45,
   centeredSlides: true,
   loop: true,
   pagination: {

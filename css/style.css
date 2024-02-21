@@ -470,29 +470,68 @@ section {
   position: relative;
   display: grid; }
 
-div.swiper {
+div.swiper-1 {
   margin: 10rem auto;
-  width: 95%;
+  width: 80%;
   height: auto;
-  position: static; }
-  div.swiper .swiper-wrapper .swiper-slide {
+  position: relative;
+  padding: 0 4rem 6rem 4rem; }
+  div.swiper-1 .swiper-wrapper .swiper-slide {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center; }
-  div.swiper .swiper-wrapper .portfolio-info {
+  div.swiper-1 .swiper-wrapper .portfolio-info {
     display: grid;
-    grid-template-columns: 40% 40%;
-    gap: 3rem;
-    justify-content: center; }
-    div.swiper .swiper-wrapper .portfolio-info__img {
-      max-width: 100%;
+    grid-template-columns: 50% 40%;
+    gap: 2.5rem;
+    justify-content: center;
+    align-items: center; }
+    div.swiper-1 .swiper-wrapper .portfolio-info__img {
+      width: 100%;
       height: auto;
+      object-fit: cover;
+      max-width: 100%;
       border-radius: 10px; }
-    div.swiper .swiper-wrapper .portfolio-info__text {
+    div.swiper-1 .swiper-wrapper .portfolio-info__text {
       padding-top: 1rem; }
-  div.swiper-pagination {
+  div.swiper-1-pagination {
     margin-top: 2rem; }
+
+div.swiper-2 {
+  margin: 10rem auto;
+  width: 80%;
+  height: auto;
+  position: relative;
+  padding: 0 4rem 6rem 4rem; }
+  div.swiper-2 .swiper-wrapper .swiper-slide {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  div.swiper-2 .swiper-wrapper .portfolio-info {
+    display: grid;
+    grid-template-columns: 50% 40%;
+    gap: 2.5rem;
+    justify-content: center;
+    align-items: center; }
+    div.swiper-2 .swiper-wrapper .portfolio-info__img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      max-width: 100%;
+      border-radius: 10px; }
+    div.swiper-2 .swiper-wrapper .portfolio-info__text {
+      padding-top: 1rem; }
+  div.swiper-2-pagination {
+    margin-top: 2rem; }
+  div.swiper-2 .swiper-slide {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: black; }
 
 div.swiper div.swiper-pagination {
   bottom: 0; }
@@ -502,11 +541,11 @@ div.swiper-button-next::after {
   font-size: 20px; }
 
 div.swiper-button-prev {
-  top: 60%;
+  top: 50%;
   left: 0; }
 
 div.swiper-button-next {
-  top: 60%;
+  top: 50%;
   right: 0; }
 
 header {

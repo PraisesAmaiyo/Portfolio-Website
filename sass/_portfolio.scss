@@ -5,11 +5,13 @@
 }
 
 // SWIPER 1
-div.swiper {
+div.swiper-1 {
    margin: 10rem auto;
-   width: 95%;
+   // margin: 10rem 4%;
+   width: 80%;
    height: auto;
-   position: static;
+   position: relative;
+   padding: 0 4rem 6rem 4rem;
 
    .swiper-wrapper {
       // width: 500px;
@@ -23,15 +25,62 @@ div.swiper {
 
       .portfolio-info {
          display: grid;
-         grid-template-columns: 40% 40%;
-         gap: 3rem;
+         grid-template-columns: 50% 40%;
+         gap: 2.5rem;
          justify-content: center;
+         align-items: center;
          // grid-template-rows: repeat(2, min-content);
-         // align-items: center;
 
          &__img {
-            max-width: 100%;
+            width: 100%;
             height: auto;
+            object-fit: cover;
+            max-width: 100%;
+            border-radius: 10px;
+         }
+
+         &__text {
+            padding-top: 1rem;
+
+         }
+      }
+   }
+
+   &-pagination {
+      margin-top: 2rem;
+   }
+}
+
+// SWIPER 2
+div.swiper-2 {
+   margin: 10rem auto;
+   // margin: 10rem 4%;
+   width: 80%;
+   height: auto;
+   position: relative;
+   padding: 0 4rem 6rem 4rem;
+
+   .swiper-wrapper {
+      .swiper-slide {
+         width: 100%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+
+      .portfolio-info {
+         display: grid;
+         grid-template-columns: 50% 40%;
+         gap: 2.5rem;
+         justify-content: center;
+         align-items: center;
+         // grid-template-rows: repeat(2, min-content);
+
+         &__img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            max-width: 100%;
             border-radius: 10px;
          }
 
@@ -46,6 +95,14 @@ div.swiper {
       margin-top: 2rem;
    }
 
+   .swiper-slide {
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 3rem;
+      color: black;
+   }
 }
 
 //  CSS SELECTOR SPECIFICITY
@@ -59,29 +116,14 @@ div.swiper-button-next::after {
 }
 
 div.swiper-button-prev {
-   top: 60%;
+   top: 50%;
    left: 0;
 }
 
 div.swiper-button-next {
-   top: 60%;
+   top: 50%;
    right: 0;
 }
-
-
-// // SWIPER 2
-// div.swiper-2 {
-//    background-color: #ccc;
-// }
-
-// .swiper-slide {
-//    height: 4rem;
-//    display: flex;
-//    justify-content: center;
-//    align-items: center;
-//    font-size: 3rem;
-//    color: black;
-// }
 
 // .swipers {
 //    width: 300px;
