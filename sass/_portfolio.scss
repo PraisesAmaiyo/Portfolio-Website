@@ -6,7 +6,7 @@
 
 // SWIPER 1
 div.swiper-1 {
-   margin: 10rem auto;
+   margin: 2.5rem auto;
    // margin: 10rem 4%;
    width: 80%;
    height: auto;
@@ -53,7 +53,7 @@ div.swiper-1 {
 
 // SWIPER 2
 div.swiper-2 {
-   margin: 10rem auto;
+   margin: 2.5rem auto;
    // margin: 10rem 4%;
    width: 80%;
    height: auto;
@@ -77,9 +77,9 @@ div.swiper-2 {
          // grid-template-rows: repeat(2, min-content);
 
          &__img {
-            width: 100%;
+            width: 90%;
             height: auto;
-            object-fit: cover;
+            // object-fit: cover;
             max-width: 100%;
             border-radius: 10px;
          }
