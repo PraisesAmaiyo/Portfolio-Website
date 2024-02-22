@@ -36,18 +36,23 @@ var swiper = new Swiper('.swiper-2', {
   },
 });
 
-// var swiper = new Swiper('.swipers', {
-//   slidesPerView: 3,
-//   //   loop: true,
-//   spaceBetween: 30,
+// var swiper = new Swiper('.swiper-2', {
+//   effect: 'coverflow',
+//   grabCursor: true,
 //   centeredSlides: true,
+//   slidesPerView: 'auto',
+//   coverflowEffect: {
+//     rotate: 50,
+//     stretch: 0,
+//     depth: 100,
+//     modifier: 1,
+//     slideShadows: true,
+//   },
+//   pagination: {
+//     el: '.swiper-pagination',
+//   },
 //   autoplay: {
 //     delay: 1000,
 //     disableOnInteraction: false,
-//   },
-
-//   pagination: {
-//     el: '.swiper-pagination',
-//     clickable: true,
 //   },
 // });
