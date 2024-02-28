@@ -66,130 +66,20 @@ div.swiper-1 {
    }
 }
 
-
-
-// SWIPER 2
-// div.swiper-2 {
-//    margin: 2.5rem auto;
-//    // margin: 10rem 4%;
-//    width: 80%;
-//    height: auto;
-//    position: relative;
-//    padding: 0 4rem 6rem 4rem;
-
-//    .swiper-wrapper {
-//       .swiper-slide {
-//          width: 100%;
-//          display: flex;
-//          justify-content: center;
-//          align-items: center;
-//       }
-
-//       .portfolio-info {
-//          display: grid;
-//          grid-template-columns: 50% 40%;
-//          gap: 2.5rem;
-//          justify-content: center;
-//          align-items: center;
-
-//          opacity: 0;
-//          transition: opacity 0.5s ease-in-out;
-//          // grid-template-rows: repeat(2, min-content);
-
-//          &__img {
-//             width: 90%;
-//             height: auto;
-//             // object-fit: cover;
-//             max-width: 100%;
-//             border-radius: 10px;
-//          }
-
-//          &__text {
-//             padding-top: 1rem;
-
-//          }
-//       }
-//    }
-
-//    &-pagination {
-//       margin-top: 2rem;
-//    }
-
-//    .swiper-slide {
-//       height: auto;
-//       display: flex;
-//       justify-content: center;
-//       align-items: center;
-//       font-size: 3rem;
-//       color: black;
-//    }
-// }
-
-
-// .swiper-2 {
-//    width: 100%;
-//    padding-top: 50px;
-//    padding-bottom: 50px;
-
-//    .swiper-slide {
-//       background-position: center;
-//       background-size: cover;
-//       width: 300px;
-//       height: 300px;
-//    }
-
-//    .swiper-slide img {
-//       display: block;
-//       width: 100%;
-//    }
-// }
-
-//  CSS SELECTOR SPECIFICITY
-
-
 div.swiper-button-prev::after,
 div.swiper-button-next::after {
    font-size: 20px;
 }
 
-
-// @media (max-width: 500px) {
-//    .gDesign-slide {
-//       width: 28rem !important;
-//       height: 36rem !important;
-//    }
-
-//    .gDesign-slide .gDesign-slide-img img {
-//       width: 28rem !important;
-//       height: 36rem !important;
-//    }
-// }
-
-
-// @media (max-width: 500px) {
-//    #tranding .gDesign-slider {
-//       height: 45rem;
-//    }
-// }
-
-
 div.swiper-2 {
    margin: 2.5rem auto;
    // margin: 10rem 4%;
-   width: 80%;
+   width: 100%;
    height: auto;
-   position: relative;
    padding: 0 4rem 6rem 4rem;
-}
-
-.gDesign-slider {
-   width: 37rem;
-   height: 52rem;
-   padding: 2rem 0;
-   position: relative;
 
    // @media (max-width: 500px) {
-   //    #tranding .gDesign-slider {
+   //  .gDesign-slider {
    //       height: 45rem;
    //    }
    // }
@@ -211,7 +101,7 @@ div.swiper-2 {
       //    }
       // }
 
-      & .gDesign-slide-img img {
+      &-img img {
          width: 37rem;
          height: 42rem;
          border-radius: 2rem;
@@ -242,9 +132,16 @@ div.swiper-2 {
       width: 3.5rem;
       height: 3.5rem;
       border-radius: 50%;
-      left: 42%;
       transform: translateX(-42%);
       filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+
+      div.swiper-button-prev {
+         left: 10%;
+      }
+
+      div.arrow-forward-outline {
+         right: 10%;
+      }
    }
 
    .gDesign-slider-control .slider-arrow ion-icon {
@@ -270,3 +167,97 @@ div.swiper-2 {
       background: var(--primary);
    }
 }
+
+div.swiper-3 {
+   margin: 2.5rem auto;
+   width: 100%;
+   height: auto;
+   padding: 0 4rem 6rem 4rem;
+
+   h3,
+   h5 {
+      text-transform: capitalize;
+   }
+
+   .testimonial-slider {
+      position: relative;
+      padding-bottom: 4rem;
+      overflow: hidden;
+
+   }
+
+   .testi-item {
+      text-align: center;
+      border: 0.1rem solid var(--grey);
+      border-radius: 0.5rem;
+      padding: 4rem 2rem;
+   }
+
+   .testi-item:hover {
+      border-color: var(--purple);
+   }
+
+   .testi-item img {
+      height: 10rem;
+      width: 10rem;
+      border-radius: 50%;
+      border: 0.5rem solid var(--white);
+   }
+
+   .testi-item .fa-quote-left {
+      display: block;
+      font-size: 3rem;
+      color: var(--orange);
+      margin: 1rem 0;
+   }
+
+   .testi-item p {
+      color: var(--grey);
+      font-size: 1.5rem;
+      line-height: 1.5;
+   }
+
+   .testi-item .intro {
+      margin: 1rem 0;
+   }
+
+   .testi-item .intro h3 {
+      font-size: 2rem;
+      color: var(--white);
+      padding-bottom: 0.5rem;
+   }
+
+   .testi-item .intro h5 {
+      color: var(--orange);
+      font-size: 1.6rem;
+   }
+
+
+   .swiper-pagination .swiper-pagination-bullet-active {
+      background: var(--primary);
+   }
+
+
+   .swiper-pagination .swiper-pagination-bullet-active {
+      background: var(--white);
+   }
+}
+
+// @media (max-width: 500px) {
+//    .gDesign-slide {
+//       width: 28rem !important;
+//       height: 36rem !important;
+//    }
+
+//    .gDesign-slide .gDesign-slide-img img {
+//       width: 28rem !important;
+//       height: 36rem !important;
+//    }
+// }
+
+
+// @media (max-width: 500px) {
+//    #tranding .gDesign-slider {
+//       height: 45rem;
+//    }
+// }

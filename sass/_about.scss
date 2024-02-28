@@ -5,7 +5,8 @@ section {
 
 .about,
 .skills,
-.services {
+.services,
+.contact {
    grid-column: center-start / center-end;
    position: relative;
 
@@ -14,7 +15,8 @@ section {
 
    .about-content,
    .skills-content,
-   .services-content {
+   .services-content,
+   .contact-content {
       height: max-content;
       display: grid;
       grid-template-columns: repeat(2, 50%);
@@ -89,4 +91,128 @@ section {
    font-size: 1.5rem;
    white-space: nowrap;
    overflow: hidden;
+}
+
+// Contact
+.contact .contact-content {
+   align-items: start;
+
+   .contact-content__details {
+      padding: 2rem;
+
+      .heading {
+         font-size: 2.5rem;
+         margin: 0 0 1rem 0;
+      }
+
+      .card-text {
+         margin-bottom: 1.5rem;
+      }
+
+      .contact-socials {
+         display: flex;
+         align-items: center;
+         gap: 1rem;
+         margin-bottom: 2rem;
+
+         i {
+            font-size: 3.5rem;
+         }
+
+         &__detail {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+         }
+
+         .card-heading,
+         .card-text {
+            margin-bottom: 0;
+         }
+      }
+   }
+
+   form {
+      min-width: 25rem;
+
+      .title {
+         font-size: 2.5rem;
+         margin-bottom: 2rem;
+      }
+
+      .form-group {
+         position: relative;
+
+         label {
+            display: block;
+            margin-bottom: 0.5rem;
+
+            .icon {
+               color: #57565c;
+               height: 1.3rem;
+               position: absolute;
+               left: 1.5rem;
+               top: 1.1rem;
+            }
+         }
+
+         .form-control {
+            background-color: var(--grey);
+            border-radius: 2rem;
+            border: none;
+            box-shadow: 0px 3px 5px var(--orange);
+            height: 4.3rem;
+            padding: 1rem 3.5rem;
+            width: 100%;
+            margin-bottom: 1rem;
+
+            &:focus {
+               background-color: var(--white);
+               outline: none;
+               box-shadow: 0px 5px 5px var(--orange);
+            }
+         }
+
+         &.message .form-control {
+            padding: 1rem 3.5rem;
+            box-sizing: border-box;
+            font-size: 16px;
+            height: auto;
+         }
+      }
+
+      ::placeholder {
+         font-weight: 600;
+         font-size: 1.3rem;
+         color: #838788;
+         position: relative;
+         left: 0;
+      }
+
+      input,
+      textarea {
+         font-family: 'Quicksand', sans-serif;
+         color: #212529;
+         font-size: 1.1rem;
+      }
+   }
+}
+
+.btn.btn-primary {
+   font-family: 'Quicksand', sans-serif;
+   font-weight: bold;
+   height: 2.5rem;
+   line-height: 2.5rem;
+   padding: 0 3rem;
+   border: 0;
+   border-radius: 3rem;
+   background-image: linear-gradient(131deg, #ffd340, #ff923c, #ff923c, #ff923c);
+   background-size: 300% 100%;
+   transition: all 0.3s ease-in-out;
+}
+
+.btn.btn-primary:hover:enabled {
+   box-shadow: 0 0.5em 0.5em -0.4em #ff923cba;
+   background-size: 100% 100%;
+   transform: translateY(-0.15em);
 }

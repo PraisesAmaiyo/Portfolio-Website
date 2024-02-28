@@ -7,12 +7,14 @@
   :root {
      --orange: #d1593c;
      --black: rgba(50, 65, 81, 0.384);
-     --white: #f7f5f2;
+     --white: #fff;
      --grey: #dfdfde;
+     --grey-2: #f5f5f5;
      --faint: #dfdfde3e;
      --dark: rgba(24, 40, 56, 0.924);
+     --light: #df8b77;
+
      --primary: #ec994b;
-     --bg: #f5f5f5;
   }
 
   $font-primary: 'lora', serif;
@@ -57,7 +59,7 @@
   .container {
      display: grid;
      grid-template-rows: max-content max-content max-content repeat(3, min-content);
-     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] minmax(min-content, 120rem) [center-end] minmax(6rem, 1fr) [full-end];
+     grid-template-columns: [full-start] minmax(.2rem, 1fr) [center-start] minmax(min-content, 120rem) [center-end] minmax(.2rem, 1fr) [full-end];
      justify-content: center;
   }
 

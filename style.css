@@ -157,3 +157,20 @@ body {
     background: var(--primary);
   }
 }
+
+button {
+  margin: 50px;
+  width: 300px;
+  height: 50px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: linear-gradient(115deg, #fff000, #000fff, #fff000);
+  background-size: 200%;
+  transition: 0.5s background-position ease-in-out;
+}
+
+button:hover {
+  background-position: right;
+}
