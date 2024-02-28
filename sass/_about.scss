@@ -107,6 +107,7 @@ section {
 
       .card-text {
          margin-bottom: 1.5rem;
+         font-weight: 600;
       }
 
       .contact-socials {
@@ -117,6 +118,7 @@ section {
 
          i {
             font-size: 3.5rem;
+            color: var(--orange);
          }
 
          &__detail {
@@ -135,11 +137,6 @@ section {
    form {
       min-width: 25rem;
 
-      .title {
-         font-size: 2.5rem;
-         margin-bottom: 2rem;
-      }
-
       .form-group {
          position: relative;
 
@@ -149,70 +146,56 @@ section {
 
             .icon {
                color: #57565c;
-               height: 1.3rem;
+               font-size: 1.5rem;
                position: absolute;
                left: 1.5rem;
-               top: 1.1rem;
+               top: 1.5rem;
             }
          }
 
          .form-control {
-            background-color: var(--grey);
             border-radius: 2rem;
             border: none;
+            outline: none;
             box-shadow: 0px 3px 5px var(--orange);
             height: 4.3rem;
-            padding: 1rem 3.5rem;
+            padding: 1rem 4rem;
             width: 100%;
             margin-bottom: 1rem;
+            background: linear-gradient(150deg, var(--white), var(--white), var(--grey), var(--grey));
+            background-size: 300%;
+            transition: background 0.5s ease-in-out;
+            background-position: right;
 
             &:focus {
-               background-color: var(--white);
+               background-position: left;
                outline: none;
                box-shadow: 0px 5px 5px var(--orange);
             }
          }
 
          &.message .form-control {
-            padding: 1rem 3.5rem;
             box-sizing: border-box;
-            font-size: 16px;
+            font-size: 1.6rem;
             height: auto;
          }
-      }
 
-      ::placeholder {
-         font-weight: 600;
-         font-size: 1.3rem;
-         color: #838788;
-         position: relative;
-         left: 0;
-      }
+         input,
+         textarea {
 
-      input,
-      textarea {
-         font-family: 'Quicksand', sans-serif;
-         color: #212529;
-         font-size: 1.1rem;
+            color: #212529;
+            font-size: 1.5rem;
+
+            &::placeholder {
+               font-weight: 600;
+               font-size: 1.5rem;
+               color: #838788;
+               position: relative;
+               left: 2px;
+
+            }
+
+         }
       }
    }
-}
-
-.btn.btn-primary {
-   font-family: 'Quicksand', sans-serif;
-   font-weight: bold;
-   height: 2.5rem;
-   line-height: 2.5rem;
-   padding: 0 3rem;
-   border: 0;
-   border-radius: 3rem;
-   background-image: linear-gradient(131deg, #ffd340, #ff923c, #ff923c, #ff923c);
-   background-size: 300% 100%;
-   transition: all 0.3s ease-in-out;
-}
-
-.btn.btn-primary:hover:enabled {
-   box-shadow: 0 0.5em 0.5em -0.4em #ff923cba;
-   background-size: 100% 100%;
-   transform: translateY(-0.15em);
 }

@@ -206,7 +206,8 @@ body {
     padding-bottom: 2rem; }
   .card-heading {
     font-size: 1.8rem;
-    margin-bottom: 1rem; }
+    margin-bottom: 1rem;
+    color: var(--grey); }
     .card-heading span {
       font-weight: 400;
       font-size: 1.4rem; }
@@ -231,6 +232,10 @@ body {
     .text-tabs .text-tab p {
       font-size: 1.2rem; }
 
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem; }
+
 .underline {
   text-decoration: underline; }
 
@@ -251,6 +256,9 @@ body {
 
 .mb-bigger {
   margin-bottom: 6rem; }
+
+.ml-small {
+  margin-left: 2rem; }
 
 .home {
   padding: 0rem 1%;
@@ -486,14 +494,16 @@ section {
       font-size: 2.5rem;
       margin: 0 0 1rem 0; }
     .contact .contact-content .contact-content__details .card-text {
-      margin-bottom: 1.5rem; }
+      margin-bottom: 1.5rem;
+      font-weight: 600; }
     .contact .contact-content .contact-content__details .contact-socials {
       display: flex;
       align-items: center;
       gap: 1rem;
       margin-bottom: 2rem; }
       .contact .contact-content .contact-content__details .contact-socials i {
-        font-size: 3.5rem; }
+        font-size: 3.5rem;
+        color: var(--orange); }
       .contact .contact-content .contact-content__details .contact-socials__detail {
         display: flex;
         flex-direction: column;
@@ -503,9 +513,6 @@ section {
         margin-bottom: 0; }
   .contact .contact-content form {
     min-width: 25rem; }
-    .contact .contact-content form .title {
-      font-size: 2.5rem;
-      margin-bottom: 2rem; }
     .contact .contact-content form .form-group {
       position: relative; }
       .contact .contact-content form .form-group label {
@@ -513,56 +520,42 @@ section {
         margin-bottom: 0.5rem; }
         .contact .contact-content form .form-group label .icon {
           color: #57565c;
-          height: 1.3rem;
+          font-size: 1.5rem;
           position: absolute;
           left: 1.5rem;
-          top: 1.1rem; }
+          top: 1.5rem; }
       .contact .contact-content form .form-group .form-control {
-        background-color: var(--grey);
         border-radius: 2rem;
         border: none;
+        outline: none;
         box-shadow: 0px 3px 5px var(--orange);
         height: 4.3rem;
-        padding: 1rem 3.5rem;
+        padding: 1rem 4rem;
         width: 100%;
-        margin-bottom: 1rem; }
+        margin-bottom: 1rem;
+        background: linear-gradient(150deg, var(--white), var(--white), var(--grey), var(--grey));
+        background-size: 300%;
+        transition: background 0.5s ease-in-out;
+        background-position: right; }
         .contact .contact-content form .form-group .form-control:focus {
-          background-color: var(--white);
+          background-position: left;
           outline: none;
           box-shadow: 0px 5px 5px var(--orange); }
       .contact .contact-content form .form-group.message .form-control {
-        padding: 1rem 3.5rem;
         box-sizing: border-box;
-        font-size: 16px;
+        font-size: 1.6rem;
         height: auto; }
-    .contact .contact-content form ::placeholder {
-      font-weight: 600;
-      font-size: 1.3rem;
-      color: #838788;
-      position: relative;
-      left: 0; }
-    .contact .contact-content form input,
-    .contact .contact-content form textarea {
-      font-family: 'Quicksand', sans-serif;
-      color: #212529;
-      font-size: 1.1rem; }
-
-.btn.btn-primary {
-  font-family: 'Quicksand', sans-serif;
-  font-weight: bold;
-  height: 2.5rem;
-  line-height: 2.5rem;
-  padding: 0 3rem;
-  border: 0;
-  border-radius: 3rem;
-  background-image: linear-gradient(131deg, #ffd340, #ff923c, #ff923c, #ff923c);
-  background-size: 300% 100%;
-  transition: all 0.3s ease-in-out; }
-
-.btn.btn-primary:hover:enabled {
-  box-shadow: 0 0.5em 0.5em -0.4em #ff923cba;
-  background-size: 100% 100%;
-  transform: translateY(-0.15em); }
+      .contact .contact-content form .form-group input,
+      .contact .contact-content form .form-group textarea {
+        color: #212529;
+        font-size: 1.5rem; }
+        .contact .contact-content form .form-group input::placeholder,
+        .contact .contact-content form .form-group textarea::placeholder {
+          font-weight: 600;
+          font-size: 1.5rem;
+          color: #838788;
+          position: relative;
+          left: 2px; }
 
 .portfolio {
   grid-column: center-start / center-end;
