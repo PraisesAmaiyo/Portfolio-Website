@@ -67,10 +67,10 @@ var swiper = new Swiper('.swiper-3', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
+  //   autoplay: {
+  //     delay: 3000,
+  //     disableOnInteraction: false,
+  //   },
 });
 
 // var swiper = new Swiper('.swiper-2', {
