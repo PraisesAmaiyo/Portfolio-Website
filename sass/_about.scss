@@ -110,107 +110,141 @@ section {
 }
 
 // Contact
-.contact .contact-content {
-   align-items: start;
+.contact {
 
-   .contact-content__details {
-      padding: 2rem;
+   .contact-content {
+      align-items: start;
 
-      .heading {
-         font-size: 2.5rem;
-         margin: 0 0 1rem 0;
-      }
-
-      .card-text {
-         margin-bottom: 1.5rem;
-         font-weight: 600;
-      }
-
-      .contact-socials {
-         display: flex;
+      @media only screen and (max-width:$bp-large) {
+         grid-template-columns: 1fr;
+         grid-template-rows: repeat(2, min-content);
          align-items: center;
-         gap: 1rem;
-         margin-bottom: 2rem;
+      }
 
-         i {
-            font-size: 3.5rem;
-            color: var(--orange);
+      .contact-content__details {
+         padding: 2rem;
+
+         .contact-text {
+
+            @media only screen and (max-width:$bp-large) {
+               text-align: center;
+            }
          }
 
-         &__detail {
+         .contact-link {
+
+            // @media only screen and (max-width:$bp-large) {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
+            justify-content: space-around;
+            margin-left: 0;
+            gap: .5rem;
+            // }
          }
 
-         .card-heading,
+         .heading {
+            font-size: 2.5rem;
+            margin: 0 0 1rem 0;
+         }
+
          .card-text {
-            margin-bottom: 0;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+         }
+
+         .contact-socials {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+
+            i {
+               font-size: 3.5rem;
+               color: var(--orange);
+            }
+
+            &__detail {
+               display: flex;
+               flex-direction: column;
+               justify-content: center;
+            }
+
+            .card-heading,
+            .card-text {
+               margin-bottom: 0;
+            }
+
+            .card-heading {
+               font-size: 1.7rem;
+            }
+
+            .card-text {
+               font-size: 1.4rem;
+            }
          }
       }
-   }
 
-   form {
-      min-width: 25rem;
+      form {
+         min-width: 25rem;
 
-      .form-group {
-         position: relative;
+         .form-group {
+            position: relative;
 
-         label {
-            display: block;
-            margin-bottom: 0.5rem;
+            label {
+               display: block;
+               margin-bottom: 0.5rem;
 
-            .icon {
-               color: #57565c;
-               font-size: 1.5rem;
-               position: absolute;
-               left: 1.5rem;
-               top: 1.5rem;
+               .icon {
+                  color: #57565c;
+                  font-size: 1.5rem;
+                  position: absolute;
+                  left: 1.5rem;
+                  top: 1.5rem;
+               }
             }
-         }
 
-         .form-control {
-            border-radius: 2rem;
-            border: none;
-            outline: none;
-            box-shadow: 0px 3px 5px var(--orange);
-            height: 4.3rem;
-            padding: 1rem 4rem;
-            width: 100%;
-            margin-bottom: 1rem;
-            background: linear-gradient(150deg, var(--white), var(--white), var(--grey), var(--grey));
-            background-size: 300%;
-            transition: background 0.5s ease-in-out;
-            background-position: right;
-
-            &:focus {
-               background-position: left;
+            .form-control {
+               border-radius: 2rem;
+               border: none;
                outline: none;
-               box-shadow: 0px 5px 5px var(--orange);
+               box-shadow: 0px 3px 5px var(--orange);
+               height: 4.3rem;
+               padding: 1rem 4rem;
+               width: 100%;
+               margin-bottom: 1rem;
+               background: linear-gradient(150deg, var(--white), var(--white), var(--grey), var(--grey));
+               background-size: 300%;
+               transition: background 0.5s ease-in-out;
+               background-position: right;
+
+               &:focus {
+                  background-position: left;
+                  outline: none;
+                  box-shadow: 0px 5px 5px var(--orange);
+               }
             }
-         }
 
-         &.message .form-control {
-            box-sizing: border-box;
-            font-size: 1.6rem;
-            height: auto;
-         }
+            &.message .form-control {
+               box-sizing: border-box;
+               font-size: 1.6rem;
+               height: auto;
+            }
 
-         input,
-         textarea {
+            input,
+            textarea {
 
-            color: #212529;
-            font-size: 1.5rem;
-
-            &::placeholder {
-               font-weight: 600;
+               color: #212529;
                font-size: 1.5rem;
-               color: #838788;
-               position: relative;
-               left: 2px;
+
+               &::placeholder {
+                  font-weight: 600;
+                  font-size: 1.5rem;
+                  color: #838788;
+                  position: relative;
+                  left: 2px;
+
+               }
 
             }
-
          }
       }
    }

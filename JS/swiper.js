@@ -44,11 +44,10 @@ var swiper = new Swiper('.swiper-2', {
 
 // Testimonial;
 var swiper = new Swiper('.swiper-3', {
-  slidesPerView: '2',
-  spaceBetween: 10,
+  slidesPerView: 1,
+  spaceBetween: 30,
   freeMode: true,
   centeredSlides: true,
-  initialSlide: '0',
   loop: true,
   pagination: {
     el: '.swiper-pagination',
@@ -65,9 +64,19 @@ var swiper = new Swiper('.swiper-3', {
   //   },
 
   breakpoints: {
-    200: {
+    320: {
       slidesPerView: 1,
-      spaceBetween: 10,
+      spaceBetween: 15,
+    },
+    // when window width is >= 480px
+    480: {
+      slidesPerView: 1.5,
+      spaceBetween: 20,
+    },
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 30,
     },
   },
 });

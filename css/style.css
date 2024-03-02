@@ -537,8 +537,21 @@ section {
 
 .contact .contact-content {
   align-items: start; }
+  @media only screen and (max-width: 45.7em) {
+    .contact .contact-content {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, min-content);
+      align-items: center; } }
   .contact .contact-content .contact-content__details {
     padding: 2rem; }
+    @media only screen and (max-width: 45.7em) {
+      .contact .contact-content .contact-content__details .contact-text {
+        text-align: center; } }
+    .contact .contact-content .contact-content__details .contact-link {
+      display: flex;
+      justify-content: space-around;
+      margin-left: 0;
+      gap: .5rem; }
     .contact .contact-content .contact-content__details .heading {
       font-size: 2.5rem;
       margin: 0 0 1rem 0; }
@@ -560,6 +573,10 @@ section {
       .contact .contact-content .contact-content__details .contact-socials .card-heading,
       .contact .contact-content .contact-content__details .contact-socials .card-text {
         margin-bottom: 0; }
+      .contact .contact-content .contact-content__details .contact-socials .card-heading {
+        font-size: 1.7rem; }
+      .contact .contact-content .contact-content__details .contact-socials .card-text {
+        font-size: 1.4rem; }
   .contact .contact-content form {
     min-width: 25rem; }
     .contact .contact-content form .form-group {
@@ -715,11 +732,7 @@ div.swiper-3 {
     text-align: center;
     border: 0.1rem solid var(--grey);
     border-radius: 0.5rem;
-    padding: 4rem 2rem;
-    max-width: 300px; }
-    @media only screen and (max-width: 20.8em) {
-      div.swiper-3 .testi-item {
-        width: 90%; } }
+    padding: 4rem 2rem; }
   div.swiper-3 .testi-item:hover {
     border-color: var(--purple); }
   div.swiper-3 .testi-item img {
