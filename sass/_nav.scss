@@ -3,7 +3,7 @@ header {
    top: 0;
    left: 0;
    width: 100%;
-   padding: 2rem 5%;
+   padding: 2rem 5% 2rem 2%;
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -20,14 +20,21 @@ header {
       letter-spacing: 0.2rem;
    }
 
-   & .navbar a {
-      color: var(--white);
-      font-size: 1.8rem;
-      margin-left: 1rem;
+   & .navbar {
 
-      &:hover,
-      &.active {
-         color: var(--orange);
+      @media only screen and (max-width:$bp-smaller) {
+         display: none;
+      }
+
+      a {
+         color: var(--white);
+         font-size: 1.8rem;
+         margin-left: 1rem;
+
+         &:hover,
+         &.active {
+            color: var(--orange);
+         }
       }
    }
 
@@ -35,15 +42,11 @@ header {
       font-size: 3rem;
       color: var(--white);
       cursor: pointer;
-      -webkit-transition: all 0.5s linear;
-      -moz-transition: all 0.5s linear;
-      -o-transition: all 0.5s linear;
       transition: all 0.5s linear;
       display: none;
    }
 
    & .fa-times {
-      -webkit-transform: rotate(180deg);
       transform: rotate(180deg);
    }
 

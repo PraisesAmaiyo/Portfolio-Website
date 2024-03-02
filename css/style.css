@@ -46,6 +46,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  background-position: center;
   color: white; }
 
 .container {
@@ -634,6 +635,9 @@ div.swiper-1 {
   height: auto;
   position: relative;
   padding: 0 4rem 7rem 4rem; }
+  @media only screen and (max-width: 20.8em) {
+    div.swiper-1 .swiper-wrapper {
+      margin-bottom: 5rem; } }
   div.swiper-1 .swiper-wrapper .swiper-slide {
     width: 100%;
     display: flex;
@@ -680,6 +684,9 @@ div.swiper-2 {
   padding: 0 4rem 7rem 4rem; }
   div.swiper-2 .swiper-wrapper {
     margin-bottom: 3rem; }
+    @media only screen and (max-width: 20.8em) {
+      div.swiper-2 .swiper-wrapper {
+        margin-bottom: 5rem; } }
   div.swiper-2 .gDesign-slide {
     width: 37rem;
     height: 42rem;
@@ -701,6 +708,9 @@ div.swiper-2 {
     justify-content: center;
     left: 50%;
     transform: translate(-50%); }
+    @media only screen and (max-width: 20.8em) {
+      div.swiper-2 .gDesign-slider-control {
+        width: 100%; } }
   div.swiper-2 div.swiper-button-prev {
     left: 10%;
     color: var(--orange); }
@@ -733,42 +743,44 @@ div.swiper-3 {
     border: 0.1rem solid var(--grey);
     border-radius: 0.5rem;
     padding: 4rem 2rem; }
-  div.swiper-3 .testi-item:hover {
-    border-color: var(--purple); }
-  div.swiper-3 .testi-item img {
-    height: 10rem;
-    width: 10rem;
-    border-radius: 50%;
-    border: 0.5rem solid var(--white); }
-  div.swiper-3 .testi-item .fa-quote-left {
-    display: block;
-    font-size: 3rem;
-    color: var(--orange);
-    margin: 1rem 0; }
-  div.swiper-3 .testi-item p {
-    color: var(--grey);
-    font-size: 1.5rem;
-    line-height: 1.5; }
-  div.swiper-3 .testi-item .intro {
-    margin: 1rem 0; }
-  div.swiper-3 .testi-item .intro h3 {
-    font-size: 2rem;
-    color: var(--white);
-    padding-bottom: 0.5rem; }
-  div.swiper-3 .testi-item .intro h5 {
-    color: var(--orange);
-    font-size: 1.6rem; }
-  div.swiper-3 .swiper-pagination .swiper-pagination-bullet-active {
-    background: var(--primary); }
-  div.swiper-3 .swiper-pagination .swiper-pagination-bullet-active {
-    background: var(--white); }
+    div.swiper-3 .testi-item:hover {
+      border-color: var(--purple); }
+    div.swiper-3 .testi-item img {
+      height: 10rem;
+      width: 10rem;
+      border-radius: 50%;
+      border: 0.5rem solid var(--white); }
+    div.swiper-3 .testi-item .fa-quote-left {
+      display: block;
+      font-size: 3rem;
+      color: var(--orange);
+      margin: 1rem 0; }
+    div.swiper-3 .testi-item p {
+      color: var(--grey);
+      font-size: 1.5rem;
+      line-height: 1.5; }
+    div.swiper-3 .testi-item .intro {
+      margin: 1rem 0; }
+    div.swiper-3 .testi-item .intro h3 {
+      font-size: 2rem;
+      color: var(--white);
+      padding-bottom: 0.5rem; }
+    div.swiper-3 .testi-item .intro h5 {
+      color: var(--orange);
+      font-size: 1.6rem; }
+  div.swiper-3 .swiper-pagination {
+    bottom: 0; }
+    div.swiper-3 .swiper-pagination .swiper-pagination-bullet-active {
+      background: var(--primary); }
+    div.swiper-3 .swiper-pagination .swiper-pagination-bullet-active {
+      background: var(--white); }
 
 header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 2rem 5%;
+  padding: 2rem 5% 2rem 2%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -782,6 +794,9 @@ header {
     color: var(--orange);
     text-transform: uppercase;
     letter-spacing: 0.2rem; }
+  @media only screen and (max-width: 20.8em) {
+    header .navbar {
+      display: none; } }
   header .navbar a {
     color: var(--white);
     font-size: 1.8rem;
@@ -792,13 +807,9 @@ header {
     font-size: 3rem;
     color: var(--white);
     cursor: pointer;
-    -webkit-transition: all 0.5s linear;
-    -moz-transition: all 0.5s linear;
-    -o-transition: all 0.5s linear;
     transition: all 0.5s linear;
     display: none; }
   header .fa-times {
-    -webkit-transform: rotate(180deg);
     transform: rotate(180deg); }
   header #menu-btn:hover {
     color: var(--orange); }

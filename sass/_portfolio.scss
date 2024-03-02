@@ -13,7 +13,9 @@ div.swiper-1 {
    padding: 0 4rem 7rem 4rem;
 
    .swiper-wrapper {
-      // width: 500px;
+      @media only screen and (max-width:$bp-smaller) {
+         margin-bottom: 5rem;
+      }
 
       .swiper-slide {
          width: 100%;
@@ -90,24 +92,16 @@ div.swiper-2 {
 
    .swiper-wrapper {
       margin-bottom: 3rem;
+
+      @media only screen and (max-width:$bp-smaller) {
+         margin-bottom: 5rem;
+      }
    }
 
    .gDesign-slide {
       width: 37rem;
       height: 42rem;
       position: relative;
-
-      // @media (max-width: 500px) {
-      //    .gDesign-slide {
-      //       width: 28rem !important;
-      //       height: 36rem !important;
-      //    }
-
-      //    .gDesign-slide .gDesign-slide-img img {
-      //       width: 28rem !important;
-      //       height: 36rem !important;
-      //     }
-      // }
 
       &-img img {
          width: 37rem;
@@ -131,12 +125,11 @@ div.swiper-2 {
       justify-content: center;
       left: 50%;
       transform: translate(-50%);
-   }
 
-   // .gDesign-slider-control .swiper-button-next {
-   //    left: 58% !important;
-   //    transform: translateX(-58%) !important;
-   // }
+      @media only screen and (max-width:$bp-smaller) {
+         width: 100%;
+      }
+   }
 
    div.swiper-button-prev {
       left: 10%;
@@ -186,78 +179,57 @@ div.swiper-3 {
       border: 0.1rem solid var(--grey);
       border-radius: 0.5rem;
       padding: 4rem 2rem;
-      // max-width: 300px;
 
 
-      // @media only screen and (max-width:$bp-smaller) {
-      //    width: 90%;
-      // }
+      &:hover {
+         border-color: var(--purple);
+      }
+
+      img {
+         height: 10rem;
+         width: 10rem;
+         border-radius: 50%;
+         border: 0.5rem solid var(--white);
+      }
+
+      .fa-quote-left {
+         display: block;
+         font-size: 3rem;
+         color: var(--orange);
+         margin: 1rem 0;
+      }
+
+      p {
+         color: var(--grey);
+         font-size: 1.5rem;
+         line-height: 1.5;
+      }
+
+      .intro {
+         margin: 1rem 0;
+      }
+
+      .intro h3 {
+         font-size: 2rem;
+         color: var(--white);
+         padding-bottom: 0.5rem;
+      }
+
+      .intro h5 {
+         color: var(--orange);
+         font-size: 1.6rem;
+      }
    }
 
-   .testi-item:hover {
-      border-color: var(--purple);
-   }
+   .swiper-pagination {
+      bottom: 0;
 
-   .testi-item img {
-      height: 10rem;
-      width: 10rem;
-      border-radius: 50%;
-      border: 0.5rem solid var(--white);
-   }
+      .swiper-pagination-bullet-active {
+         background: var(--primary);
+      }
 
-   .testi-item .fa-quote-left {
-      display: block;
-      font-size: 3rem;
-      color: var(--orange);
-      margin: 1rem 0;
-   }
-
-   .testi-item p {
-      color: var(--grey);
-      font-size: 1.5rem;
-      line-height: 1.5;
-   }
-
-   .testi-item .intro {
-      margin: 1rem 0;
-   }
-
-   .testi-item .intro h3 {
-      font-size: 2rem;
-      color: var(--white);
-      padding-bottom: 0.5rem;
-   }
-
-   .testi-item .intro h5 {
-      color: var(--orange);
-      font-size: 1.6rem;
-   }
-
-
-   .swiper-pagination .swiper-pagination-bullet-active {
-      background: var(--primary);
-   }
-
-   .swiper-pagination .swiper-pagination-bullet-active {
-      background: var(--white);
+      .swiper-pagination-bullet-active {
+         background: var(--white);
+      }
    }
 }
-
-// @media (max-width: 500px) {
-//    .gDesign-slide {
-//       width: 28rem !important;
-//       height: 36rem !important;
-//    }
-
-//    .gDesign-slide .gDesign-slide-img img {
-//       width: 28rem !important;
-//       height: 36rem !important;
-//    }
-// }
-
-
-// @media (max-width: 500px) {
-//    #tranding .gDesign-slider {
-//       height: 45rem;
-//    }
-// }

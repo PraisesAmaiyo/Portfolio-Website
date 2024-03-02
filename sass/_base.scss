@@ -36,7 +36,6 @@
      margin: 0;
      padding: 0;
      text-decoration: none;
-     // text-transform: capitalize;
      transition: all 0.2s linear;
 
      &::selection {
@@ -72,6 +71,7 @@
      background-repeat: no-repeat;
      background-attachment: fixed;
      background-size: cover;
+     background-position: center;
      color: white;
   }
 
