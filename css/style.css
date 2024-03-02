@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap");
 .--orange {
-  color: #d1593c !important; }
+  color: #F17105 !important; }
 
 :root {
-  --orange: #d1593c;
+  --orange: #F17105;
   --black: rgba(50, 65, 81, 0.384);
   --white: #fff;
   --grey: #dfdfde;
@@ -102,6 +102,7 @@ body {
 .btn {
   position: relative;
   font-size: 1.5rem;
+  font-weight: 700;
   padding: 1.3rem 1.7rem;
   background-color: var(--orange);
   color: var(--white);
