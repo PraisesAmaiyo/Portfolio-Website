@@ -1,7 +1,7 @@
   @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap');
 
   .--orange {
-     color: #d1593c
+     color: #d1593c !important
   }
 
   :root {
@@ -80,6 +80,10 @@
      grid-template-rows: max-content max-content max-content repeat(3, min-content);
      grid-template-columns: [full-start] minmax(.2rem, 1fr) [center-start] minmax(min-content, 120rem) [center-end] minmax(.2rem, 1fr) [full-end];
      justify-content: center;
+
+     @media only screen and (max-width:$bp-small) {
+        grid-template-columns: [full-start] 1fr [center-start] minmax(100vw, 120rem) [center-end] 1fr [full-end];
+     }
   }
 
 

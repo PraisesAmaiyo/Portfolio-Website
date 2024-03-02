@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap");
 .--orange {
-  color: #d1593c; }
+  color: #d1593c !important; }
 
 :root {
   --orange: #d1593c;
@@ -53,6 +53,9 @@ body {
   grid-template-rows: max-content max-content max-content repeat(3, min-content);
   grid-template-columns: [full-start] minmax(0.2rem, 1fr) [center-start] minmax(min-content, 120rem) [center-end] minmax(0.2rem, 1fr) [full-end];
   justify-content: center; }
+  @media only screen and (max-width: 30.5em) {
+    .container {
+      grid-template-columns: [full-start] 1fr [center-start] minmax(100vw, 120rem) [center-end] 1fr [full-end]; } }
 
 ::-webkit-scrollbar {
   width: 0.8rem; }
@@ -215,14 +218,14 @@ body {
     font-size: 2rem;
     padding-bottom: 2rem; }
   .card-heading {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
     color: var(--grey); }
     .card-heading span {
       font-weight: 400;
       font-size: 1.4rem; }
   .card-text {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: var(--grey); }
 
 .text-tabs {
@@ -230,7 +233,8 @@ body {
   justify-content: space-around;
   gap: 1rem; }
   .text-tabs .text-tab {
-    background-color: var(--orange);
+    background: linear-gradient(150deg, #1a2a3a, #313f4e);
+    border: 1px solid var(--orange);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -240,7 +244,7 @@ body {
     .text-tabs .text-tab h1 {
       font-size: 2rem; }
     .text-tabs .text-tab p {
-      font-size: 1.2rem; }
+      font-size: 1.3rem; }
 
 .title {
   font-size: 2.5rem;
@@ -365,7 +369,7 @@ body {
 
 .education,
 .experience {
-  width: 65%; }
+  width: 90%; }
   .education-item,
   .experience-item {
     display: grid;
@@ -382,27 +386,33 @@ body {
       font-size: 1.8rem;
       border-radius: 50rem;
       width: max-content; }
-    .education-item i,
-    .experience-item i {
-      position: relative;
-      height: 5rem;
-      width: 5rem;
-      border-radius: 50%;
-      line-height: 5rem;
-      text-align: center;
-      font-size: 2rem;
-      color: var(--white);
-      background: var(--orange);
-      z-index: 2; }
-    .education-item .experience-line,
-    .education-item .education-line,
-    .experience-item .experience-line,
-    .experience-item .education-line {
-      height: 100%;
-      width: 2px;
-      background-color: var(--orange);
-      display: block;
-      transform: translate(19px, -7px); }
+    .education-item .middle-line,
+    .experience-item .middle-line {
+      position: relative; }
+      .education-item .middle-line i,
+      .experience-item .middle-line i {
+        position: relative;
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        line-height: 4rem;
+        text-align: center;
+        font-size: 2rem;
+        color: var(--white);
+        background: var(--orange);
+        z-index: 2; }
+      .education-item .middle-line .experience-line,
+      .education-item .middle-line .education-line,
+      .experience-item .middle-line .experience-line,
+      .experience-item .middle-line .education-line {
+        height: 100%;
+        width: 2px;
+        background-color: var(--orange);
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
     .education-item h3,
     .experience-item h3 {
       font-size: 2rem;
@@ -410,12 +420,12 @@ body {
       padding: 1rem 0 1rem 0; }
     .education-item h2,
     .experience-item h2 {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       color: var(--white);
       padding: .5rem 0; }
     .education-item h2 em,
     .experience-item h2 em {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       color: rgba(255, 255, 255, 0.769); }
 
 section {
@@ -451,6 +461,13 @@ section {
     gap: 2rem;
     justify-content: center;
     align-items: center; }
+  @media only screen and (max-width: 30.5em) {
+    .about .about-content,
+    .skills .about-content,
+    .services .about-content,
+    .contact .about-content {
+      grid-template-columns: 100%;
+      grid-template-rows: 1fr 1fr; } }
   .about-image,
   .skills-image,
   .services-image,
@@ -458,8 +475,12 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: drop-shadow(3px -1px 4px var(--orange));
-    object-fit: contain; }
+    filter: drop-shadow(3px -1px 4px var(--orange)); }
+  .about-info,
+  .skills-info,
+  .services-info,
+  .contact-info {
+    padding: 2rem; }
   .about-btn,
   .skills-btn,
   .services-btn,
@@ -468,15 +489,22 @@ section {
 
 .services-tab {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 40%));
-  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 45%));
+  grid-gap: 2.5rem;
   justify-content: center; }
+  @media only screen and (max-width: 20.8em) {
+    .services-tab {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-gap: 3.5rem; } }
   .services-tab .card-wide {
     background-color: var(--black);
     padding: 2rem;
     width: 100%; }
-    .services-tab .card-wide .card-text {
+    .services-tab .card-wide .card-heading {
       color: var(--orange); }
+    .services-tab .card-wide .card-text {
+      color: var(--white); }
     .services-tab .card-wide .icon {
       font-size: 2rem;
       margin-bottom: 1rem; }
@@ -585,7 +613,7 @@ section {
 
 div.swiper-1 {
   margin: 7rem auto;
-  width: 80%;
+  width: 100%;
   height: auto;
   position: relative;
   padding: 0 4rem 7rem 4rem; }
@@ -600,6 +628,11 @@ div.swiper-1 {
     gap: 2.5rem;
     justify-content: center;
     align-items: center; }
+    @media only screen and (max-width: 30.5em) {
+      div.swiper-1 .swiper-wrapper .portfolio-info {
+        grid-template-columns: 90%;
+        grid-template-rows: repeat(2, 1fr);
+        gap: 1rem; } }
     div.swiper-1 .swiper-wrapper .portfolio-info__img {
       width: 100%;
       height: auto;
@@ -628,6 +661,8 @@ div.swiper-2 {
   width: 100%;
   height: auto;
   padding: 0 4rem 7rem 4rem; }
+  div.swiper-2 .swiper-wrapper {
+    margin-bottom: 3rem; }
   div.swiper-2 .gDesign-slide {
     width: 37rem;
     height: 42rem;
@@ -680,7 +715,11 @@ div.swiper-3 {
     text-align: center;
     border: 0.1rem solid var(--grey);
     border-radius: 0.5rem;
-    padding: 4rem 2rem; }
+    padding: 4rem 2rem;
+    max-width: 300px; }
+    @media only screen and (max-width: 20.8em) {
+      div.swiper-3 .testi-item {
+        width: 90%; } }
   div.swiper-3 .testi-item:hover {
     border-color: var(--purple); }
   div.swiper-3 .testi-item img {

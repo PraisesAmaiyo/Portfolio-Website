@@ -7,7 +7,7 @@
 // SWIPER 1
 div.swiper-1 {
    margin: 7rem auto;
-   width: 80%;
+   width: 100%;
    height: auto;
    position: relative;
    padding: 0 4rem 7rem 4rem;
@@ -28,7 +28,12 @@ div.swiper-1 {
          gap: 2.5rem;
          justify-content: center;
          align-items: center;
-         // grid-template-rows: repeat(2, min-content);
+
+         @media only screen and (max-width:$bp-small) {
+            grid-template-columns: 90%;
+            grid-template-rows: repeat(2, 1fr);
+            gap: 1rem;
+         }
 
          &__img {
             width: 100%;
@@ -83,6 +88,10 @@ div.swiper-2 {
    //    }
    // }
 
+   .swiper-wrapper {
+      margin-bottom: 3rem;
+   }
+
    .gDesign-slide {
       width: 37rem;
       height: 42rem;
@@ -97,7 +106,7 @@ div.swiper-2 {
       //    .gDesign-slide .gDesign-slide-img img {
       //       width: 28rem !important;
       //       height: 36rem !important;
-      //    }
+      //     }
       // }
 
       &-img img {
@@ -177,6 +186,12 @@ div.swiper-3 {
       border: 0.1rem solid var(--grey);
       border-radius: 0.5rem;
       padding: 4rem 2rem;
+      max-width: 300px;
+
+
+      @media only screen and (max-width:$bp-smaller) {
+         width: 90%;
+      }
    }
 
    .testi-item:hover {

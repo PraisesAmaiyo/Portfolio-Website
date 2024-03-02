@@ -19,10 +19,16 @@ section {
       height: max-content;
       display: grid;
       grid-template-columns: repeat(2, 50%);
-      // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2rem;
       justify-content: center;
       align-items: center;
+   }
+
+   .about-content {
+      @media only screen and (max-width:$bp-small) {
+         grid-template-columns: 100%;
+         grid-template-rows: 1fr 1fr;
+      }
    }
 
    &-image {
@@ -30,7 +36,10 @@ section {
       height: 100%;
       object-fit: cover;
       filter: drop-shadow(3px -1px 4px var(--orange));
-      object-fit: contain;
+   }
+
+   &-info {
+      padding: 2rem;
    }
 
    &-btn {
@@ -40,20 +49,28 @@ section {
 
 .services-tab {
    display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(300px, 40%));
-   grid-gap: 2rem;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 45%));
+   grid-gap: 2.5rem;
    justify-content: center;
+
+   @media only screen and (max-width:$bp-smaller) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-gap: 3.5rem;
+   }
 
    .card-wide {
       background-color: var(--black);
       padding: 2rem;
       width: 100%;
-      // color: var(--orange);
 
-      .card-text {
+      .card-heading {
          color: var(--orange);
       }
 
+      .card-text {
+         color: var(--white);
+      }
 
       .icon {
          font-size: 2rem;

@@ -23,7 +23,7 @@
 
 .education,
 .experience {
-   width: 65%;
+   width: 90%;
 
    &-item {
       display: grid;
@@ -43,26 +43,33 @@
          width: max-content;
       }
 
-      & i {
+      .middle-line {
          position: relative;
-         height: 5rem;
-         width: 5rem;
-         border-radius: 50%;
-         line-height: 5rem;
-         text-align: center;
-         font-size: 2rem;
-         color: var(--white);
-         background: var(--orange);
-         z-index: 2;
-      }
 
-      .experience-line,
-      .education-line {
-         height: 100%;
-         width: 2px;
-         background-color: var(--orange);
-         display: block;
-         transform: translate(19px, -7px);
+         & i {
+            position: relative;
+            height: 4rem;
+            width: 4rem;
+            border-radius: 50%;
+            line-height: 4rem;
+            text-align: center;
+            font-size: 2rem;
+            color: var(--white);
+            background: var(--orange);
+            z-index: 2;
+         }
+
+         .experience-line,
+         .education-line {
+            height: 100%;
+            width: 2px;
+            background-color: var(--orange);
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+         }
       }
 
       & h3 {
@@ -72,13 +79,13 @@
       }
 
       & h2 {
-         font-size: 1.5rem;
+         font-size: 1.6rem;
          color: var(--white);
          padding: .5rem 0;
       }
 
       & h2 em {
-         font-size: 1.5rem;
+         font-size: 1.6rem;
          color: rgba(255, 255, 255, 0.769);
       }
    }

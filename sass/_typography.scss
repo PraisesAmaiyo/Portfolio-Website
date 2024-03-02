@@ -208,7 +208,7 @@
    }
 
    &-heading {
-      font-size: 1.8rem;
+      font-size: 2.5rem;
       margin-bottom: 1rem;
       color: var(--grey);
 
@@ -219,7 +219,7 @@
    }
 
    &-text {
-      font-size: 1.5rem;
+      font-size: 2rem;
       color: var(--grey);
    }
 }
@@ -230,7 +230,8 @@
    gap: 1rem;
 
    .text-tab {
-      background-color: var(--orange);
+      background: linear-gradient(150deg, #1a2a3a, #313f4e);
+      border: 1px solid var(--orange);
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -243,7 +244,7 @@
       }
 
       p {
-         font-size: 1.2rem;
+         font-size: 1.3rem;
       }
    }
 
