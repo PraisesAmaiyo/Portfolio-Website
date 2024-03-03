@@ -68,13 +68,20 @@
   }
 
   body {
-     background-image: linear-gradient(to right, rgba(24, 40, 56, 0.924), rgba(24, 40, 56, 0.924)), url(../img/Home-Image.png);
-     margin: 0 auto;
+     background-image: linear-gradient(to right, rgba(24, 40, 56, 0.924), rgba(24, 40, 56, 0.924)), url(../img/Home-Image.webp);
+     //   background-color: #182838;
+     //   background-image: url(../img/Home-Image.webp);
      background-repeat: no-repeat;
      background-attachment: fixed;
      background-size: cover;
      background-position: center;
+     margin: 0 auto;
      color: white;
+
+     // trying to fix IOS browser issues with background
+     //   -webkit-background-size: cover;
+     //   -moz-background-size: cover;
+     //   -o-background-size: cover;
   }
 
   .container {
