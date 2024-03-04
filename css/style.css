@@ -44,7 +44,7 @@ html {
 html::before {
   content: ' ';
   display: block;
-  background-image: url("../img/Home-Image.webp");
+  background-image: linear-gradient(to right bottom, rgba(var(--bgColor1), 0.924), rgba(var(--bgColor2), 0.924)), url("../img/Home-Image.webp");
   background-position: center;
   /*For my instance this is how I have built my bg image. Indexes off the 
   bottom left for consistency*/
