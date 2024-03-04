@@ -22,7 +22,7 @@ header {
 
    & .navbar {
 
-      @media only screen and (max-width:$bp-smaller) {
+      @media only screen and (max-width:$bp-small) {
          display: none;
       }
 

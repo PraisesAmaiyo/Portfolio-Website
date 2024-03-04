@@ -36,15 +36,12 @@ html {
       font-size: 50%; } }
   @media only screen and (max-width: 38.6em) {
     html {
-      font-size: 40%; } }
-  @media only screen and (max-width: 20.8em) {
-    html {
-      font-size: 30%; } }
+      font-size: 42%; } }
 
 html::before {
   content: ' ';
   display: block;
-  background-image: linear-gradient(to right bottom, rgba(var(--bgColor1), 0.924), rgba(var(--bgColor2), 0.924)), url("../img/Home-Image.webp");
+  background-image: linear-gradient(to right bottom, rgba(var(--bgColor1), 0.93), rgba(var(--bgColor2), 0.93)), url("../img/Home-Image.webp");
   background-position: center;
   /*For my instance this is how I have built my bg image. Indexes off the 
   bottom left for consistency*/
@@ -317,6 +314,10 @@ html::before {
       border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
       object-fit: cover;
       animation: changeProperties 10s infinite; }
+      @media only screen and (max-width: 45.7em) {
+        .home .image img {
+          height: 30rem;
+          width: 30rem; } }
   .home .content {
     width: 50%;
     display: flex;
@@ -329,15 +330,24 @@ html::before {
         width: 100%;
         margin-top: 2.5rem;
         padding: 2rem; } }
+    @media only screen and (max-width: 30.5em) {
+      .home .content {
+        margin-top: .5rem; } }
     .home .content h2 {
       font-size: 2.2rem;
       font-weight: 500;
       color: var(--orange); }
+      @media only screen and (max-width: 30.5em) {
+        .home .content h2 {
+          font-size: 2.5rem; } }
     .home .content h1 {
       font-size: 3rem;
       color: var(--white);
       padding: 1rem 0;
       text-transform: none; }
+      @media only screen and (max-width: 30.5em) {
+        .home .content h1 {
+          font-size: 3.5rem; } }
       .home .content h1 span {
         color: var(--orange); }
     .home .content p {
@@ -346,6 +356,9 @@ html::before {
       color: var(--white);
       padding-bottom: 2rem;
       line-height: 1.5; }
+      @media only screen and (max-width: 30.5em) {
+        .home .content p {
+          font-size: 2.3rem; } }
 
 @keyframes changeProperties {
   0% {
@@ -804,7 +817,7 @@ header {
     color: var(--orange);
     text-transform: uppercase;
     letter-spacing: 0.2rem; }
-  @media only screen and (max-width: 20.8em) {
+  @media only screen and (max-width: 30.5em) {
     header .navbar {
       display: none; } }
   header .navbar a {
