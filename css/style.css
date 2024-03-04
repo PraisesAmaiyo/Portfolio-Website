@@ -36,7 +36,10 @@ html {
       font-size: 50%; } }
   @media only screen and (max-width: 38.6em) {
     html {
-      font-size: 42%; } }
+      font-size: 43%; } }
+  @media only screen and (max-width: 20.8em) {
+    html {
+      font-size: 30%; } }
 
 html::before {
   content: ' ';
@@ -117,6 +120,12 @@ html::before {
   border-radius: 5px; }
   .btn:not(:last-child) {
     margin-right: 2rem; }
+  @media only screen and (max-width: 30.5em) {
+    .btn {
+      font-size: 1.7rem; } }
+  @media only screen and (max-width: 20.8em) {
+    .btn {
+      font-size: 1.6rem; } }
   .btn:focus, .btn:active {
     box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
     transform: scaleX(1.1); }
@@ -229,12 +238,24 @@ html::before {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     color: var(--orange); }
+    @media only screen and (max-width: 30.5em) {
+      .card-heading {
+        font-size: 3rem; } }
+    @media only screen and (max-width: 20.8em) {
+      .card-heading {
+        font-size: 2.5rem; } }
     .card-heading span {
       font-weight: 400;
       font-size: 1.4rem; }
   .card-text {
     font-size: 2rem;
     color: var(--grey); }
+    @media only screen and (max-width: 30.5em) {
+      .card-text {
+        font-size: 2.5rem; } }
+    @media only screen and (max-width: 20.8em) {
+      .card-text {
+        font-size: 2.1rem; } }
 
 .text-tabs {
   display: flex;
@@ -248,7 +269,8 @@ html::before {
     justify-content: center;
     align-items: center;
     padding: .5rem;
-    width: 100%; }
+    width: 100%;
+    color: var(--grey-2); }
     .text-tabs .text-tab h1 {
       font-size: 2rem; }
     .text-tabs .text-tab p {
@@ -339,7 +361,7 @@ html::before {
       color: var(--orange); }
       @media only screen and (max-width: 30.5em) {
         .home .content h2 {
-          font-size: 2.5rem; } }
+          font-size: 2rem; } }
     .home .content h1 {
       font-size: 3rem;
       color: var(--white);
@@ -348,6 +370,9 @@ html::before {
       @media only screen and (max-width: 30.5em) {
         .home .content h1 {
           font-size: 3.5rem; } }
+      @media only screen and (max-width: 20.8em) {
+        .home .content h1 {
+          font-size: 3rem; } }
       .home .content h1 span {
         color: var(--orange); }
     .home .content p {
@@ -359,6 +384,9 @@ html::before {
       @media only screen and (max-width: 30.5em) {
         .home .content p {
           font-size: 2.3rem; } }
+      @media only screen and (max-width: 20.8em) {
+        .home .content p {
+          font-size: 1.6rem; } }
 
 @keyframes changeProperties {
   0% {
@@ -395,6 +423,10 @@ html::before {
 .education,
 .experience {
   width: 90%; }
+  @media only screen and (max-width: 30.5em) {
+    .education,
+    .experience {
+      width: 100%; } }
   .education-item,
   .experience-item {
     display: grid;
@@ -506,6 +538,12 @@ section {
   .services-info,
   .contact-info {
     padding: 2rem; }
+    @media only screen and (max-width: 30.5em) {
+      .about-info,
+      .skills-info,
+      .services-info,
+      .contact-info {
+        padding: 2rem 0; } }
   .about-btn,
   .skills-btn,
   .services-btn,

@@ -25,6 +25,11 @@
 .experience {
    width: 90%;
 
+
+   @media only screen and (max-width:$bp-small) {
+      width: 100%;
+   }
+
    &-item {
       display: grid;
       grid-template-columns: 1fr max-content 1fr;

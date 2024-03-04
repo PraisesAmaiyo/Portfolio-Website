@@ -71,12 +71,12 @@
      }
 
      @media only screen and (max-width:$bp-medium) {
-        font-size: 42%;
+        font-size: 43%;
      }
 
-     //   @media only screen and (max-width:$bp-smaller) {
-     //      font-size: 30%;
-     //   }
+     @media only screen and (max-width:$bp-smaller) {
+        font-size: 30%;
+     }
   }
 
   // stackoverflow Solution 1 for background images
