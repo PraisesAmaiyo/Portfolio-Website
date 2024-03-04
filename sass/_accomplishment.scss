@@ -54,7 +54,7 @@
             line-height: 4rem;
             text-align: center;
             font-size: 2rem;
-            color: var(--white);
+            color: var(--grey-2);
             background: var(--orange);
             z-index: 2;
          }
@@ -86,7 +86,7 @@
 
       & h2 em {
          font-size: 1.6rem;
-         color: rgba(255, 255, 255, 0.769);
+         color: var(--orange);
       }
    }
 }

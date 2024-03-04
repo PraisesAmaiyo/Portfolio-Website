@@ -181,9 +181,8 @@ div.swiper-3 {
       border-radius: 0.5rem;
       padding: 4rem 2rem;
 
-
       &:hover {
-         border-color: var(--purple);
+         border-color: var(--orange);
       }
 
       img {
@@ -226,7 +225,7 @@ div.swiper-3 {
       bottom: 0;
 
       .swiper-pagination-bullet-active {
-         background: var(--primary);
+         background: var(--orange);
       }
 
       .swiper-pagination-bullet-active {

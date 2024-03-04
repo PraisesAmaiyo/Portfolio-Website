@@ -4,7 +4,7 @@
    font-size: 4rem;
    grid-column: 1 / -1;
    font-weight: 700;
-
+   color: var(--orange);
 
    &-sub {
       font-size: 2.8rem;
@@ -42,7 +42,7 @@
    font-weight: 700;
    padding: 1.3rem 1.7rem;
    background-color: var(--orange);
-   color: var(--white);
+   color: var(--grey-2);
    width: max-content;
    margin-top: 1rem;
    border-radius: 5px;
@@ -211,7 +211,7 @@
    &-heading {
       font-size: 2.5rem;
       margin-bottom: 1rem;
-      color: var(--grey);
+      color: var(--orange);
 
       & span {
          font-weight: 400;
@@ -248,13 +248,12 @@
          font-size: 1.3rem;
       }
    }
-
 }
-
 
 .title {
    font-size: 2.5rem;
    margin-bottom: 2rem;
+   color: var(--orange);
 }
 
 .underline {

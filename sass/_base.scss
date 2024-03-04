@@ -1,22 +1,34 @@
   @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap');
 
   .--orange {
-     color: #F17105 !important
+     color: #013486 !important
   }
 
   :root {
-     --orange: #F17105;
-     --black: rgba(50, 65, 81, 0.384);
-     --white: #fff;
-     --grey: #dfdfde;
-     --grey-2: #f5f5f5;
+     //   --orange: #d1593c;
+     //   --black: rgba(50, 65, 81, 0.384);
+     //   --white: #fff;
+     //   --grey: #dfdfde;
+     //   --grey-2: #f5f5f5;
+     //   --faint: #dfdfde3e;
+     //   --dark: rgba(24, 40, 56, 0.924);
+     //   --light: #dee2e6;
+     //   --bgColor1: 24, 40, 56;
+     //   --bgColor2: 24, 40, 56;
+
+     --orange: #013486;
+     --black: #dee2e6;
+     --white: #212529;
+     --grey: #343140;
+     --grey-2: #f8f9fa;
      --faint: #dfdfde3e;
      --dark: rgba(24, 40, 56, 0.924);
-     --light: #df8b77;
+     --light: #dee2e6;
+     --bgColor1: 248, 249, 250;
+     --bgColor2: 241, 243, 245;
 
-     --primary: #ec994b;
 
-     //   backup colours - #FBB13C 8/10,  
+     //   backup colours - #FBB13C 8/10, d1593c, 182838, 183c5d
   }
 
   $font-primary: 'lora', serif;
@@ -41,7 +53,7 @@
      transition: all 0.2s linear;
 
      &::selection {
-        color: var(--white);
+        color: var(--grey-2);
         background-color: var(--orange);
      }
   }
@@ -68,7 +80,7 @@
   }
 
   body {
-     background-image: linear-gradient(to right, rgba(24, 40, 56, 0.924), rgba(24, 40, 56, 0.924)), url(../img/Home-Image.webp);
+     background-image: linear-gradient(to right bottom, rgba(var(--bgColor1), 0.924), rgba(var(--bgColor2), 0.924)), url(../img/Home-Image.webp);
      //   background-color: #182838;
      //   background-image: url(../img/Home-Image.webp);
      background-repeat: no-repeat;
@@ -82,6 +94,41 @@
      -webkit-background-size: cover;
      -moz-background-size: cover;
      -o-background-size: cover;
+
+     // Stackoverflow 1
+     //      html::before {
+     //       content: ' ';
+     //       display: block;
+     //       background-image: url('path-to-your-image');
+     //       background-position: bottom left; 
+     //       /*For my instance this is how I have built my bg image. Indexes off the 
+     //   bottom left for consistency*/
+     //       background-size: cover;
+     //       top: 0;
+     //       bottom: 0;
+     //       left: 0;
+     //       right: 0;
+     //       position: fixed;
+     //       z-index: -10; 
+     //       /*I haven't tested my full app functionality after changing the z-index, but everything appears to work flawlessly right now.*/
+     //   }
+
+     // Stackoverflow 2
+     //   body:before {
+     //    content: "";
+     //    display: block;
+     //    position: fixed;
+     //    left: 0;
+     //    top: 0;
+     //    width: 100%;
+     //    height: 100%;
+     //    z-index: -10;
+     //    background: url(photos/2452.jpg) no-repeat center center;
+     //    -webkit-background-size: cover;
+     //    -moz-background-size: cover;
+     //    -o-background-size: cover;
+     //    background-size: cover;
+     //  }
   }
 
   .container {
@@ -94,7 +141,6 @@
         grid-template-columns: [full-start] 1fr [center-start] minmax(100vw, 120rem) [center-end] 1fr [full-end];
      }
   }
-
 
   ::-webkit-scrollbar {
      width: 0.8rem;

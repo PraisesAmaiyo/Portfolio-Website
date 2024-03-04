@@ -1,17 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap");
 .--orange {
-  color: #F17105 !important; }
+  color: #013486 !important; }
 
 :root {
-  --orange: #F17105;
-  --black: rgba(50, 65, 81, 0.384);
-  --white: #fff;
-  --grey: #dfdfde;
-  --grey-2: #f5f5f5;
+  --orange: #013486;
+  --black: #dee2e6;
+  --white: #212529;
+  --grey: #343140;
+  --grey-2: #f8f9fa;
   --faint: #dfdfde3e;
   --dark: rgba(24, 40, 56, 0.924);
-  --light: #df8b77;
-  --primary: #ec994b; }
+  --light: #dee2e6;
+  --bgColor1: 248, 249, 250;
+  --bgColor2: 241, 243, 245; }
 
 * {
   font-family: "lora", serif;
@@ -21,7 +22,7 @@
   text-decoration: none;
   transition: all 0.2s linear; }
   *::selection {
-    color: var(--white);
+    color: var(--grey-2);
     background-color: var(--orange); }
 
 html {
@@ -41,7 +42,7 @@ html {
       font-size: 30%; } }
 
 body {
-  background-image: linear-gradient(to right, rgba(24, 40, 56, 0.924), rgba(24, 40, 56, 0.924)), url(../img/Home-Image.webp);
+  background-image: linear-gradient(to right bottom, rgba(var(--bgColor1), 0.924), rgba(var(--bgColor2), 0.924)), url(../img/Home-Image.webp);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -76,7 +77,8 @@ body {
   text-align: center;
   font-size: 4rem;
   grid-column: 1 / -1;
-  font-weight: 700; }
+  font-weight: 700;
+  color: var(--orange); }
   .heading-sub {
     font-size: 2.8rem;
     font-weight: 400;
@@ -108,7 +110,7 @@ body {
   font-weight: 700;
   padding: 1.3rem 1.7rem;
   background-color: var(--orange);
-  color: var(--white);
+  color: var(--grey-2);
   width: max-content;
   margin-top: 1rem;
   border-radius: 5px; }
@@ -225,7 +227,7 @@ body {
   .card-heading {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: var(--grey); }
+    color: var(--orange); }
     .card-heading span {
       font-weight: 400;
       font-size: 1.4rem; }
@@ -253,7 +255,8 @@ body {
 
 .title {
   font-size: 2.5rem;
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+  color: var(--orange); }
 
 .underline {
   text-decoration: underline; }
@@ -403,7 +406,7 @@ body {
         line-height: 4rem;
         text-align: center;
         font-size: 2rem;
-        color: var(--white);
+        color: var(--grey-2);
         background: var(--orange);
         z-index: 2; }
       .education-item .middle-line .experience-line,
@@ -431,7 +434,7 @@ body {
     .education-item h2 em,
     .experience-item h2 em {
       font-size: 1.6rem;
-      color: rgba(255, 255, 255, 0.769); }
+      color: var(--orange); }
 
 section {
   padding: 2rem;
@@ -512,7 +515,8 @@ section {
       color: var(--white); }
     .services-tab .card-wide .icon {
       font-size: 2rem;
-      margin-bottom: 1rem; }
+      margin-bottom: 1rem;
+      color: var(--orange); }
 
 .skills-container {
   display: grid;
@@ -520,25 +524,23 @@ section {
   grid-gap: 2px;
   align-items: center;
   justify-content: center; }
-
-.skill-box {
-  display: flex;
-  column-gap: 1rem;
-  align-items: center;
-  padding: 1rem 0;
-  border-radius: 5px;
-  width: 100%; }
-
-.skill-box img {
-  border-radius: 100%;
-  width: 2.5rem;
-  height: 2.5rem; }
-
-.skill-box span {
-  font-weight: bold;
-  font-size: 1.5rem;
-  white-space: nowrap;
-  overflow: hidden; }
+  .skills-container .skill-box {
+    display: flex;
+    column-gap: 1rem;
+    align-items: center;
+    padding: 1rem 0;
+    border-radius: 5px;
+    width: 100%; }
+    .skills-container .skill-box img {
+      border-radius: 100%;
+      width: 2.5rem;
+      height: 2.5rem; }
+    .skills-container .skill-box span {
+      font-weight: bold;
+      font-size: 1.5rem;
+      white-space: nowrap;
+      overflow: hidden;
+      color: var(--white); }
 
 .contact .contact-content {
   align-items: start; }
@@ -604,7 +606,7 @@ section {
         padding: 1rem 4rem;
         width: 100%;
         margin-bottom: 1rem;
-        background: linear-gradient(150deg, var(--white), var(--white), var(--grey), var(--grey));
+        background: linear-gradient(150deg, var(--light), var(--light), var(--grey-2), var(--grey-2));
         background-size: 300%;
         transition: background 0.5s ease-in-out;
         background-position: right; }
@@ -619,11 +621,11 @@ section {
       .contact .contact-content form .form-group input,
       .contact .contact-content form .form-group textarea {
         color: #212529;
-        font-size: 1.5rem; }
+        font-size: 1.6rem;
+        font-weight: 600; }
         .contact .contact-content form .form-group input::placeholder,
         .contact .contact-content form .form-group textarea::placeholder {
-          font-weight: 600;
-          font-size: 1.5rem;
+          font-size: 1.6rem;
           color: #838788;
           position: relative;
           left: 2px; }
@@ -748,7 +750,7 @@ div.swiper-3 {
     border-radius: 0.5rem;
     padding: 4rem 2rem; }
     div.swiper-3 .testi-item:hover {
-      border-color: var(--purple); }
+      border-color: var(--orange); }
     div.swiper-3 .testi-item img {
       height: 10rem;
       width: 10rem;
@@ -775,7 +777,7 @@ div.swiper-3 {
   div.swiper-3 .swiper-pagination {
     bottom: 0; }
     div.swiper-3 .swiper-pagination .swiper-pagination-bullet-active {
-      background: var(--primary); }
+      background: var(--orange); }
     div.swiper-3 .swiper-pagination .swiper-pagination-bullet-active {
       background: var(--white); }
 
