@@ -57,8 +57,8 @@ section {
    grid-gap: 2.5rem;
    justify-content: center;
 
-   @media only screen and (max-width:$bp-smaller) {
-      grid-template-columns: 1fr;
+   @media only screen and (max-width:$bp-small) {
+      grid-template-columns: 100%;
       grid-template-rows: 1fr 1fr;
       grid-gap: 3.5rem;
    }
@@ -107,7 +107,7 @@ section {
 
       span {
          font-weight: bold;
-         font-size: 1.5rem;
+         font-size: 1.8rem;
          white-space: nowrap;
          overflow: hidden;
          color: var(--white);

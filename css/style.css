@@ -555,9 +555,9 @@ section {
   grid-template-columns: repeat(auto-fit, minmax(300px, 45%));
   grid-gap: 2.5rem;
   justify-content: center; }
-  @media only screen and (max-width: 20.8em) {
+  @media only screen and (max-width: 30.5em) {
     .services-tab {
-      grid-template-columns: 1fr;
+      grid-template-columns: 100%;
       grid-template-rows: 1fr 1fr;
       grid-gap: 3.5rem; } }
   .services-tab .card-wide {
@@ -592,7 +592,7 @@ section {
       height: 2.5rem; }
     .skills-container .skill-box span {
       font-weight: bold;
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       white-space: nowrap;
       overflow: hidden;
       color: var(--white); }
@@ -712,7 +712,7 @@ div.swiper-1 {
     align-items: center; }
     @media only screen and (max-width: 30.5em) {
       div.swiper-1 .swiper-wrapper .portfolio-info {
-        grid-template-columns: 90%;
+        grid-template-columns: 100%;
         grid-template-rows: repeat(2, 1fr);
         gap: 1rem; } }
     div.swiper-1 .swiper-wrapper .portfolio-info__img {
@@ -818,7 +818,7 @@ div.swiper-3 {
       margin: 1rem 0; }
     div.swiper-3 .testi-item p {
       color: var(--grey);
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       line-height: 1.5; }
     div.swiper-3 .testi-item .intro {
       margin: 1rem 0; }
