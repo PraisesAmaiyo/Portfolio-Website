@@ -921,7 +921,7 @@ header {
 
 .dark-mode-icon {
   display: none;
-  color: var(--grey-2); }
+  color: #e6ebf3; }
 
 .toggle-input:checked + .toggle-label .dark-mode-icon {
   transform: translateX(26px);
@@ -931,7 +931,7 @@ header {
   display: none; }
 
 .toggle-input:checked + .toggle-label {
-  background-color: #343a40; }
+  background-color: #001028; }
 
 .footer {
   grid-column: full-start / full-end;

@@ -36,10 +36,10 @@ var swiper = new Swiper('.swiper-2', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-  //   autoplay: {
-  //     delay: 1000,
-  //     disableOnInteraction: false,
-  //   },
+  autoplay: {
+    delay: 1000,
+    disableOnInteraction: false,
+  },
 });
 
 // Testimonial;
@@ -58,22 +58,20 @@ var swiper = new Swiper('.swiper-3', {
     prevEl: '.swiper-button-prev',
   },
 
-  //   autoplay: {
-  //     delay: 3000,
-  //     disableOnInteraction: false,
-  //   },
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
 
   breakpoints: {
     320: {
       slidesPerView: 1,
       spaceBetween: 15,
     },
-    // when window width is >= 480px
     480: {
       slidesPerView: 1.5,
       spaceBetween: 20,
     },
-    // when window width is >= 640px
     640: {
       slidesPerView: 2,
       spaceBetween: 30,

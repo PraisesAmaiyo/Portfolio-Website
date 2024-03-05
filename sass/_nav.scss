@@ -109,7 +109,8 @@ header {
 
 .dark-mode-icon {
    display: none;
-   color: var(--grey-2);
+   // color: var(--grey-2);
+   color: #e6ebf3;
 }
 
 .toggle-input:checked+.toggle-label .dark-mode-icon {
@@ -122,5 +123,5 @@ header {
 }
 
 .toggle-input:checked+.toggle-label {
-   background-color: #343a40;
+   background-color: #001028;
 }
