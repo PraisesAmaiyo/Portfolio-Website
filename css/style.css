@@ -46,16 +46,16 @@ html::before {
   display: block;
   background-image: linear-gradient(to right bottom, rgba(var(--bgColor1), 0.93), rgba(var(--bgColor2), 0.93)), url("../img/Home-Image.webp");
   background-position: center;
-  /*For my instance this is how I have built my bg image. Indexes off the 
-  bottom left for consistency*/
   background-size: cover;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   position: fixed;
-  z-index: -10;
-  /*I haven't tested my full app functionality after changing the z-index, but everything appears to work flawlessly right now.*/ }
+  z-index: -10; }
+
+body {
+  margin: 0 auto; }
 
 .container {
   display: grid;
@@ -262,19 +262,20 @@ html::before {
   justify-content: space-around;
   gap: 1rem; }
   .text-tabs .text-tab {
-    background: linear-gradient(150deg, #1a2a3a, #313f4e);
-    border: 1px solid var(--orange);
+    background: linear-gradient(150deg, var(--black), var(--black));
+    border: 1px solid var(--light);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: .5rem;
     width: 100%;
-    color: var(--grey-2); }
+    color: var(--orange); }
     .text-tabs .text-tab h1 {
       font-size: 2rem; }
     .text-tabs .text-tab p {
-      font-size: 1.3rem; }
+      font-size: 1.3rem;
+      font-weight: 500; }
 
 .title {
   font-size: 2.5rem;
@@ -850,6 +851,10 @@ header {
   z-index: 999;
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px); }
+  header .header-left {
+    display: flex;
+    align-items: center;
+    gap: 2rem; }
   header .logo h2 {
     font-size: 2.5rem;
     font-weight: 900;
@@ -876,9 +881,61 @@ header {
   header #menu-btn:hover {
     color: var(--orange); }
 
+.toggle-switch {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 2.7em; }
+
+.toggle-text {
+  margin-left: 1.1rem;
+  color: #000;
+  font-size: 1.8rem;
+  position: relative; }
+
+.toggle-input {
+  display: none; }
+
+.toggle-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 6rem;
+  height: 100%;
+  background-color: #f5f5f5;
+  z-index: 1;
+  border-radius: 3rem;
+  border: 1px solid var(--white);
+  transition: background-color, transform 0.4s;
+  padding: 0 5px; }
+
+.toggle-label:hover {
+  filter: contrast(0.8); }
+
+.toggle-label .toggle-icon {
+  font-size: 1.8rem; }
+
+.light-mode-icon {
+  color: var(--orange); }
+
+.dark-mode-icon {
+  display: none;
+  color: var(--grey-2); }
+
+.toggle-input:checked + .toggle-label .dark-mode-icon {
+  transform: translateX(26px);
+  display: inline-block; }
+
+.toggle-input:checked + .toggle-label .light-mode-icon {
+  display: none; }
+
+.toggle-input:checked + .toggle-label {
+  background-color: #343a40; }
+
 .footer {
   grid-column: full-start / full-end;
-  background: #1a2a3a;
+  background: #001028;
   padding: 30px 0px;
   text-align: center; }
   .footer .row {

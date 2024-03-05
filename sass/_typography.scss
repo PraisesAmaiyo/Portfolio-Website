@@ -258,15 +258,15 @@
    gap: 1rem;
 
    .text-tab {
-      background: linear-gradient(150deg, #1a2a3a, #313f4e);
-      border: 1px solid var(--orange);
+      background: linear-gradient(150deg, var(--black), var(--black));
+      border: 1px solid var(--light);
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       padding: .5rem;
       width: 100%;
-      color: var(--grey-2);
+      color: var(--orange);
 
       h1 {
          font-size: 2rem;
@@ -274,6 +274,7 @@
 
       p {
          font-size: 1.3rem;
+         font-weight: 500;
       }
    }
 }
