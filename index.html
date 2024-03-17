@@ -510,13 +510,6 @@
 
                <div class="swiper-slide gDesign-slide">
                   <div class="gDesign-slide-img">
-                     <img src="./img/Portfolio/g-designs/g-image-14.webp" class="portfolio-info__img"
-                        alt="Portfolio image" />
-                  </div>
-               </div>
-
-               <div class="swiper-slide gDesign-slide">
-                  <div class="gDesign-slide-img">
                      <img src="./img/Portfolio/g-designs/g-image-15.webp" class="portfolio-info__img"
                         alt="Portfolio image" />
                   </div>
@@ -584,37 +577,39 @@
                </div>
 
                <div class="swiper-slide testi-item">
-                  <img src="https://mighty.tools/mockmind-api/content/human/2.jpg" alt="Testimonial-Pic" />
+                  <img src="./img/testimonials/beatrice.jpeg" alt="Testimonial-Pic" />
 
                   <i class="fas fa-quote-left"></i>
 
                   <p class="comment">
-                     Ipsum a arcu cursus vitae congue mauris rhoncus aenean. Cursus euismod quis viverra nibh cras
-                     pulvinar mattis nunc sed. Orci sagittis eu volutpat odio facilisis mauris. Accumsan lacus vel
-                     facilisis volutpat. Accumsan in nisl nisi scelerisque. Nulla facilisi nullam vehicula ipsum a arcu.
+                     As a project manager overseeing Praises's contributions, I observed his professionalism and
+                     dedication firsthand. Praises Amaiyo consistently met project deadlines and communicated
+                     effectively
+                     with team members, ensuring smooth project execution. His proactive approach to problem-solving
+                     and attention to detail made him a valuable asset to our team.
                   </p>
 
                   <div class="intro">
-                     <h3>Richard N. Wesner</h3>
+                     <h3>Beatrice Uzieyi</h3>
                      <h5>Product Manager</h5>
                   </div>
                </div>
 
                <div class="swiper-slide testi-item">
-                  <img src="https://mighty.tools/mockmind-api/content/human/44.jpg" alt="Testimonial-Pic" />
+                  <img src="./img/testimonials/happy.jpeg" alt="Testimonial-Pic" />
 
                   <i class="fas fa-quote-left"></i>
 
                   <p class="comment">
-                     Feugiat nisl pretium fusce id velit ut tortor. Tortor aliquam nulla facilisi cras fermentum odio
-                     eu. Mauris pharetra et ultrices neque ornare aenean euismod elementum. Mi eget mauris pharetra et
-                     ultrices neque ornare aenean. Risus pretium quam vulputate dignissim suspendisse in est. Elementum
-                     tempus egestas sed sed.
+                     Working alongside Praises Amaiyo on several frontend development projects was a rewarding
+                     experience. His meticulous attention to detail and expertise in HTML, CSS, and and React greatly
+                     contributed to our team's success. Praises consistently demonstrated a collaborative spirit and a
+                     skill for finding innovative solutions to complex problems.
                   </p>
 
                   <div class="intro">
-                     <h3>Julianne A. Shoults</h3>
-                     <h5>web developer</h5>
+                     <h3>Happy Faotu</h3>
+                     <h5>Frontend Developer</h5>
                   </div>
                </div>
 
@@ -671,7 +666,6 @@
                      <h5>Project Manager</h5>
                   </div>
                </div>
-
             </div>
 
             <div class="swiper-pagination"></div>
@@ -802,7 +796,7 @@
          </div>
 
          <div class="row">
-            PRAISES Copyright © 2024 Praises - All rights reserved || Designed By: Praises Amaiyo with ❤️
+            PRAISES Copyright © 2024 Praises </br> - All rights reserved || Designed By: Praises Amaiyo with ❤️
          </div>
       </footer>
 
@@ -819,6 +813,49 @@
          });
       </script>
    </div>
+
+   <div id="modal" class="modal">
+      <span class="close">&times;</span>
+      <img id="modal-content" class="modal-content" src="">
+   </div>
+
+   <script>
+      const modal = document.getElementById("modal");
+      const modalImg = document.getElementById("modal-content");
+      const images = document.getElementsByClassName("portfolio-info__img");
+      const container = document.querySelector(".container");
+
+      function openModal() {
+         modal.classList.add('active');
+         container.classList.add('blur');
+      }
+
+      function closeModal() {
+         modal.classList.remove('active');
+         container.classList.remove('blur');
+      }
+
+      for (var i = 0; i < images.length; i++) {
+         images[i].addEventListener("click", function () {
+            modalImg.src = this.src;
+            openModal();
+         });
+      }
+
+      var closeBtn = document.getElementsByClassName("close")[0];
+      closeBtn.addEventListener("click", function () {
+         closeModal()
+      });
+
+      document.addEventListener('click', function (event) {
+         if (
+            modal.classList.contains('active') &&
+            !modal.contains(event.target) && event.target.getAttribute('class') !== 'portfolio-info__img') {
+            closeModal()
+         }
+      });
+   </script>
+
 </body>
 
 </html>

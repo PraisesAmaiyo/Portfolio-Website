@@ -91,13 +91,14 @@ header {
    z-index: 1;
    border-radius: 3rem;
    border: 1px solid var(--white);
-   transition: background-color, transform 0.4s;
-   padding: 0 5px;
+   transition: background-color 0.4s, transform 0.4s;
+   padding: 0 3.5px;
+
+   &:hover {
+      filter: contrast(.8);
+   }
 }
 
-.toggle-label:hover {
-   filter: contrast(.8);
-}
 
 .toggle-label .toggle-icon {
    font-size: 1.8rem;
@@ -109,12 +110,13 @@ header {
 
 .dark-mode-icon {
    display: none;
+   margin-left: auto;
    // color: var(--grey-2);
    color: #e6ebf3;
 }
 
 .toggle-input:checked+.toggle-label .dark-mode-icon {
-   transform: translateX(26px);
+   // transform: translateX(26px);
    display: inline-block;
 }
 
