@@ -1,3 +1,9 @@
+// Set current year
+const yearEl = document.querySelector('.year');
+const currentYear = new Date().getFullYear();
+yearEl.textContent = currentYear;
+
+// Switch light and sark mode
 const toggleBtn = document.querySelector('.toggle-label');
 const toggleText = document.querySelector('.toggle-text');
 
