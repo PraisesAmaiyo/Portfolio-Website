@@ -233,3 +233,45 @@ div.swiper-3 {
       }
    }
 }
+
+// Image Optimization
+.lazy {
+   opacity: 0;
+   transition: opacity 0.3s;
+}
+
+.lazy-loaded {
+   opacity: 1;
+}
+
+
+/* Spinner styling */
+.spinner {
+   width: 7rem;
+   height: 7rem;
+   border: 7px solid rgba(0, 0, 0, 0.1);
+   border-radius: 50%;
+   border-top-color: var(--orange);
+   animation: spin 1s infinite linear;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   z-index: 10;
+}
+
+@keyframes spin {
+   // to {
+   //    transform: rotate(360deg) translate(-50%, -50%);
+   //    ;
+   // }
+
+   0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+   }
+
+   100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+   }
+
+}

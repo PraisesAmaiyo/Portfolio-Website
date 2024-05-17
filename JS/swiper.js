@@ -16,6 +16,8 @@ var swiper = new Swiper('.swiper-1', {
 
 // graphics design
 var swiper = new Swiper('.swiper-2', {
+  lazy: true,
+  preloadImages: false,
   effect: 'coverflow',
   grabCursor: true,
   centeredSlides: true,

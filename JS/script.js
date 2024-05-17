@@ -39,3 +39,95 @@ toggleBtn.addEventListener('click', () => {
     root.style.setProperty('--bgColor2', '241, 243, 245');
   }
 });
+
+// Modal
+const modal = document.getElementById('modal');
+const modalImg = document.getElementById('modal-content');
+const images = document.getElementsByClassName('portfolio-info__img');
+const container = document.querySelector('.container');
+
+function openModal() {
+  modal.classList.add('active');
+  container.classList.add('blur');
+}
+
+function closeModal() {
+  modal.classList.remove('active');
+  container.classList.remove('blur');
+}
+
+for (var i = 0; i < images.length; i++) {
+  images[i].addEventListener('click', function () {
+    modalImg.src = this.src;
+    openModal();
+  });
+}
+
+var closeBtn = document.getElementsByClassName('close')[0];
+closeBtn.addEventListener('click', function () {
+  closeModal();
+});
+
+document.addEventListener('click', function (event) {
+  if (
+    modal.classList.contains('active') &&
+    !modal.contains(event.target) &&
+    event.target.getAttribute('class') !== 'portfolio-info__img'
+  ) {
+    closeModal();
+  }
+});
+
+// Lazy image
+
+document.addEventListener('DOMContentLoaded', function () {
+  const lazyImages = document.querySelectorAll('.lazy');
+
+  const preloadImages = () => {
+    lazyImages.forEach((image) => {
+      const img = new Image();
+      img.src = image.dataset.src;
+      img.onload = () => {
+        image.src = img.src;
+        image.classList.remove('lazy');
+        image.classList.add('lazy-loaded');
+        // Remove spinner
+        const spinner = image.nextElementSibling;
+        if (spinner && spinner.classList.contains('spinner')) {
+          spinner.style.display = 'none';
+        }
+      };
+    });
+  };
+
+  const imageObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.src = img.dataset.src;
+          img.onload = () => {
+            img.classList.remove('lazy');
+            img.classList.add('lazy-loaded');
+            // Remove spinner
+            const spinner = img.nextElementSibling;
+            if (spinner && spinner.classList.contains('spinner')) {
+              spinner.style.display = 'none';
+            }
+          };
+          observer.unobserve(img);
+        }
+      });
+    },
+    {
+      rootMargin: '0px 0px 100px 0px',
+    }
+  );
+
+  lazyImages.forEach((image) => {
+    imageObserver.observe(image);
+  });
+
+  // Preload images as soon as the page loads
+  preloadImages();
+});
